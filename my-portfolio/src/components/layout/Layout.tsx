@@ -5,6 +5,7 @@ import { Navbar } from "./Navbar";
 export function Layout() {
   const links = [
     { label: "About", href: "#about" },
+    { label: "Backstory", href: "#backstory" },
     { label: "Projects", href: "#projects" },
     { label: "Contacts", href: "#contacts" },
   ];
