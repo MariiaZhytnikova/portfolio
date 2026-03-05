@@ -3,39 +3,116 @@ My portfolio
 
 ## Road Map
 
-🔹 Phase 0 — Setup
+1️⃣ Navbar
 
-Vite + React + TypeScript installed ✅
+Purpose: navigation and identity.
+Nice-to-have:
 
-styled-components + typed theme ✅
+Your “logo” or name on the left (maybe stylized: Antihero or your alias)
 
-folder structure created (app, theme, components, sections)
+Links/buttons on the right: Spotlight, Backstory, Arsenal, Signal
 
-🔹 Phase 1 — Foundation
+Optional: accent hover underline or button highlight
 
-GlobalStyle + ThemeProvider
+Sticky top so it follows scrolling
 
-Design tokens finalized (colors, spacing, radius)
+Visual idea:
 
-Container & reusable UI components (Button, Card)
+Dark background (#1B1B1F)
 
-🔹 Phase 2 — Layout
+Accent color for hover (#FF6B6B or something bold)
 
-Navbar
+Minimal typography, uppercase links
 
-Section wrapper component for consistent padding & spacing
+2️⃣ Spotlight (intro “hero”)
 
-Basic routing if needed (optional)
+Purpose: first impression — who you are.
+Nice-to-have:
 
-🔹 Phase 3 — Sections
+Big title: “Hi, I’m [Your Name], Dark Side Developer 😏”
 
-Spotlight.tsx — intro (formerly Hero)
+Subtitle: a short, fun tagline
 
-Backstory.tsx — about
+Card or container for visual focus
 
-Arsenal.tsx — projects grid
+Optional image / avatar or subtle background gradient
 
-Signal.tsx — contact form / social links
+Visual idea:
+
+Dark gradient background (#1B1B1F → #121212)
+
+Accent-colored highlight on your name / tagline
+
+Card inside Spotlight for content, maybe subtle shadow
+
+3️⃣ Backstory (about me)
+
+Purpose: tell your story.
+Nice-to-have:
+
+2–3 paragraphs or cards: who you are, background, fun fact
+
+Optional timeline (like mini “antihero journey”)
+
+Maybe 1 small image or illustration (avatar, coding scene)
+
+Visual idea:
+
+Alternating cards (dark + slightly lighter dark)
+
+Accent color for headings
+
+Subtle hover effects on cards
+
+4️⃣ Arsenal (projects)
+
+Purpose: showcase your work.
+Nice-to-have:
+
+Grid of Card components: project name, description, tech stack, link to repo / live demo
+
+Optional: hover effect (scale, shadow, overlay with details)
+
+Maybe a “featured project” card bigger than the rest
+
+Visual idea:
+
+3–4 cards per row (desktop)
+
+Dark card background (#222)
+
+Accent borders or hover glow
+
+5️⃣ Signal (contact / links)
+
+Purpose: how people can reach you.
+Nice-to-have:
+
+Contact form (name, email, message) or just email / socials
+
+Buttons with icons: GitHub, LinkedIn, maybe Instagram or Dribbble
+
+Optional: subtle gradient or background image for flair
+
+Visual idea:
+
+Dark section
+
+Accent-colored buttons with hover effect
+
+Clean, centered layout
+
+6️⃣ Extra antihero flair ideas
+
+Smooth scroll for Navbar links
+
+Subtle background gradients / particles in Spotlight
+
+Motion: fade-in cards, hover scale, section reveal
+
+Accent color sparingly — just for highlights
+
+Typography: 1–2 fonts max, bold headings, readable body text
 
 🔹 Phase 4 — Polish
 

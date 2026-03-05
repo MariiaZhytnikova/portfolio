@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const SectionWrapper = styled.section<{ bg?: string }>`
   background: ${({ bg, theme }) => bg || theme.colors.bg};
-  padding: ${({ theme }) => theme.spacing["2xl"]} 0;
+  scroll-margin-top: 80px;
 `;
 
-export function Section({ children, bg }: { children: React.ReactNode; bg?: string }) {
-  return <SectionWrapper bg={bg}>{children}</SectionWrapper>;
+export function Section({ id, children, bg }: { id?: string; children: React.ReactNode; bg?: string }) {
+  return <SectionWrapper id={id} bg={bg}>{children}</SectionWrapper>;
 }

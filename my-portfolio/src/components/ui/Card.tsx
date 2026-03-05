@@ -1,9 +1,19 @@
+// src/components/ui/Card.ts
 import styled from "styled-components";
 
-export const Card = styled.div`
-  background: ${({ theme }) => theme.colors.surface};
+export const Card = styled.div<{
+  padding?: string;
+  height?: string;
+  textAlign?: "left" | "center" | "right";
+}>`
+  background: ${({ theme }) => theme.colors.bg};
   color: ${({ theme }) => theme.colors.text};
-  border-radius: ${({ theme }) => theme.radius.lg};
-  padding: ${({ theme }) => theme.spacing.lg};
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  padding: ${({ padding, theme }) => padding || theme.spacing.xl};
+  min-height: auto;
+  height: ${({ height }) => height || "100vh"};
+  text-align: ${({ textAlign }) => textAlign || "left"};
+  // box-shadow: ${({ theme }) => theme.shadows.md};
+  // border-radius: ${({ theme }) => theme.radius.md};
+  display: flex;
+  flex-direction: column;
 `;
