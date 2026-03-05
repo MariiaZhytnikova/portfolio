@@ -19,7 +19,7 @@ const NavWrapper = styled.nav`
   top: 0;
   z-index: 100;
   background: ${({ theme }) => theme.colors.bg};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.accent};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.surface};
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 `;
 
@@ -52,14 +52,14 @@ const NavLink = styled.a`
   padding: 4px 0;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.purple};
   }
 
   &:after {
     content: "";
     display: block;
     height: 2px;
-    background: ${({ theme }) => theme.colors.accentSoft};
+    background: ${({ theme }) => theme.colors.bg};
     width: 0%;
     transition: width 0.3s;
     position: absolute;
@@ -93,11 +93,11 @@ const SearchInput = styled.input`
   }
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.accentSoft};
+    border-color: ${({ theme }) => theme.colors.bg};
   }
 `;
 
-const ThemeToggleSlider = styled.button<{ isLight: boolean }>`
+const ThemeToggleSlider = styled.button<{ $isLight: boolean }>`
   position: relative;
   width: 66px;
   height: 34px;
@@ -111,7 +111,7 @@ const ThemeToggleSlider = styled.button<{ isLight: boolean }>`
   padding: 0;
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.accent};
+    border-color: ${({ theme }) => theme.colors.purple};
   }
 
   &::after {
@@ -122,7 +122,7 @@ const ThemeToggleSlider = styled.button<{ isLight: boolean }>`
     background: ${({ theme }) => theme.colors.surface};
     border-radius: ${({ theme }) => theme.radius.pill};
     top: 2px;
-    left: ${({ isLight }) => (isLight ? "32px" : "2px")};
+    left: ${({ $isLight }) => ($isLight ? "32px" : "2px")};
     transition: left 0.3s ease;
   }
 `;
@@ -159,7 +159,7 @@ export function Navbar({
           {showThemeToggle && (
             <ThemeToggleSlider
               onClick={toggleMode}
-              isLight={mode === "light"}
+              $isLight={mode === "light"}
               aria-label="Toggle theme"
             >
               <ThemeIcon>🌙</ThemeIcon>

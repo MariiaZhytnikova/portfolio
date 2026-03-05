@@ -19,7 +19,6 @@ export const SubtitleText = styled.p`
   font-size: ${({ theme }) => theme.typography.subtitle.size};
   font-weight: ${({ theme }) => theme.typography.subtitle.weight};
   color: ${({ theme }) => theme.colors.textSoft};
-
   margin-top: ${({ theme }) => theme.spacing.md};
   margin-bottom: ${({ theme }) => theme.spacing.lg};
 `;
@@ -34,6 +33,15 @@ export const BodyText = styled.p`
 
 /* GRADIENT HEADING */
 export const GradientHeading = styled(HeadingXL)`
+  background: ${({ theme }) => theme.gradients.primary};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: fit-content;
+`;
+
+/* GRADIENT HEADING */
+export const GradientSubtitleText = styled(SubtitleText)`
   background: ${({ theme }) => theme.gradients.primary};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

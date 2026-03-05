@@ -6,7 +6,6 @@ export const Card = styled.div<{
   height?: string;
   textAlign?: "left" | "center" | "right";
 }>`
-  background: ${({ theme }) => theme.colors.bg};
   color: ${({ theme }) => theme.colors.text};
   padding: ${({ padding, theme }) => padding || theme.spacing.xl};
   min-height: auto;

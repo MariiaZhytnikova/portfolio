@@ -21,12 +21,12 @@ export const SearchInput = styled.input`
   }
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.accentSoft};
-    box-shadow: 0 0 8px ${({ theme }) => theme.colors.accentSoft};
+    border-color: ${({ theme }) => theme.colors.bg};
+    box-shadow: 0 0 8px ${({ theme }) => theme.colors.bg};
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.accentSoft};
+    border-color: ${({ theme }) => theme.colors.bg};
   }
 `;
 
@@ -41,6 +41,6 @@ export const MagnifierIcon = styled.span`
 
   ${SearchWrapper}:hover & {
     transform: translateY(-50%) scale(1.2);
-    color: ${({ theme }) => theme.colors.accentSoft};
+    color: ${({ theme }) => theme.colors.bg};
   }
 `;

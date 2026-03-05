@@ -2,11 +2,11 @@ export const tokens = {
   colors: {
     bg: "#0A0A0A",
     surface: "#262626",
+    surfaceSoft: "#26262680",
     text: "#e5e7eb",
     textSoft: "#A1A1A1",
     muted: "#FAFAFA",
-    accent: "#262626",
-    accentSoft: "#6c76d4",
+    accent: "#FFFFFF",
     orange: "#FF6900",
     purple: "#AD46FF",
   },
@@ -21,8 +21,8 @@ export const tokens = {
       weight: 600,
     },
     subtitle: {
-      size: "1.7rem",
-      weight: 500,
+      size: "1.4rem",
+      weight: 600,
     },
     body: {
       size: "1.2rem",
