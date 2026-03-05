@@ -42,6 +42,56 @@ export const SecondaryButton = styled(BaseButton)`
   }
 `;
 
+interface TextIconButtonProps {
+  label: string;
+}
+
+export const TextIconButton = styled.a<TextIconButtonProps>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space between icon and text */
+  padding: 12px 20px;
+  background: ${({ theme }) => theme.colors.surface};
+  border: 2px solid ${({ theme }) => theme.colors.surface};
+  border-radius: ${({ theme }) => theme.radius.md};
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+
+  color: ${({ theme }) => theme.colors.textSoft};
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    transition: transform 0.3s ease;
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.purple};
+  }
+
+  &:hover span {
+    transform: translateX(6px); /* move text slightly to right */
+  }
+
+  &:hover svg {
+    transform: translateX(6px); /* optional: move icon with text */
+    color: ${({ theme }) => theme.colors.purple};
+  }
+`;
+
 export const IconButton = styled.a`
   display: inline-flex;
   align-items: center;
@@ -64,6 +114,10 @@ export const IconButton = styled.a`
   &:hover {
     border-color: ${({ theme }) => theme.colors.purple};
     transform: ${({ theme }) => theme.button.hoverLift};
+  }
+
+  &:hover svg {
+    stroke: ${({ theme }) => theme.colors.purple};
   }
 `;
 

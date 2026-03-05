@@ -40,9 +40,18 @@ export const GradientHeading = styled(HeadingXL)`
   width: fit-content;
 `;
 
-/* GRADIENT HEADING */
+/* GRADIENT SUBTITLE */
 export const GradientSubtitleText = styled(SubtitleText)`
   background: ${({ theme }) => theme.gradients.primary};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: fit-content;
+`;
+
+/* ORANGE SUBTITLE */
+export const OrangeSubtitleText = styled(SubtitleText)`
+  background: ${({ theme }) => theme.colors.orange};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

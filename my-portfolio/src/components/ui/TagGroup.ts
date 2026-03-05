@@ -5,4 +5,5 @@ export const TagGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.sm};
+  margin-top: auto;
 `;

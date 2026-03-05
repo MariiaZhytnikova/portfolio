@@ -28,6 +28,10 @@ export const tokens = {
       size: "1.2rem",
       weight: 400,
     },
+    tag: {
+      size: "0.9rem",
+      weight: 400,
+    },
   },
 
   radius: {
@@ -43,7 +47,8 @@ export const tokens = {
     md: "16px",
     lg: "24px",
     xl: "40px",
-    "2xl": "64px",
+    xlTwo: "64px",
+    xlThree: "96px",
   },
 
   gradients: {

@@ -1,56 +1,13 @@
 // src/sections/Projects.tsx
-import styled from "styled-components";
 import { Section } from "../components/layout/Section";
 import { Container } from "../components/ui/Container";
-import { Card } from "../components/ui/Card";
-import { HeadingLG, BodyText } from "../components/ui/Typography";
-
-const SectionTitle = styled(HeadingLG)`
-  color: ${({ theme }) => theme.colors.text};
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-`;
-
-const ProjectsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: ${({ theme }) => theme.spacing.lg};
-`;
-
-const ProjectCard = styled(Card)`
-  padding: ${({ theme }) => theme.spacing.lg};
-  transition: all 0.2s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-`;
-
-const ProjectTitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.text};
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
-`;
-
-const ProjectDescription = styled(BodyText)`
-  margin-bottom: ${({ theme }) => theme.spacing.md};
-`;
-
-const TechStack = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: ${({ theme }) => theme.spacing.sm};
-`;
-
-const TechTag = styled.span`
-  padding: 4px 12px;
-  background: ${({ theme }) => theme.colors.bg};
-  color: ${({ theme }) => theme.colors.purple};
-  border-radius: ${({ theme }) => theme.radius.pill};
-  font-size: 0.875rem;
-  font-weight: 500;
-`;
+import { SubtitleText, HeadingLG, BodyText } from "../components/ui/Typography";
+import { Grid } from "../components/ui/Grid";
+import { StyledCategory } from "../components/ui/Grid";
+import { Tag } from "../components/ui/Tag";
+import { TagGroup } from "../components/ui/TagGroup";
+import { ButtonContainer, TextIconButton } from "../components/ui/Button";
+import { GitHubIcon, ExternalLinkIcon } from "../components/icons/Icons";
 
 const projects = [
   {
@@ -58,18 +15,24 @@ const projects = [
     title: "Project Alpha",
     description: "A full-stack web application built with modern technologies. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     tech: ["React", "Node.js", "PostgreSQL"],
+    github: "https://github.com/MariiaZhytnikova/project-alpha",
+    live: "https://project-alpha.example.com",
   },
   {
     id: 2,
     title: "Project Beta",
     description: "Mobile-first responsive design system with reusable components. Sed do eiusmod tempor incididunt ut labore.",
     tech: ["TypeScript", "Next.js", "Tailwind"],
+    github: "https://github.com/MariiaZhytnikova/project-beta",
+    live: "https://project-beta.example.com",
   },
   {
     id: 3,
     title: "Project Gamma",
     description: "Real-time data visualization dashboard with interactive charts. Duis aute irure dolor in reprehenderit.",
     tech: ["Vue.js", "GraphQL", "MongoDB"],
+    github: "https://github.com/MariiaZhytnikova/project-beta",
+    live: "https://project-beta.example.com",
   },
 ];
 
@@ -81,20 +44,42 @@ export function Projects({ id }: ProjectsProps) {
   return (
     <Section id={id}>
       <Container>
-        <SectionTitle>Featured Projects</SectionTitle>
-        <ProjectsGrid>
+        <HeadingLG>Featured Projects</HeadingLG>
+        <Grid>
           {projects.map((project) => (
-            <ProjectCard key={project.id}>
-              <ProjectTitle>{project.title}</ProjectTitle>
-              <ProjectDescription>{project.description}</ProjectDescription>
-              <TechStack>
+            <StyledCategory key={project.id}>
+              <SubtitleText>{project.title}</SubtitleText>
+              <BodyText>{project.description}</BodyText>
+              <TagGroup>
                 {project.tech.map((tech) => (
-                  <TechTag key={tech}>{tech}</TechTag>
+                  <Tag key={tech}>{tech}</Tag>
                 ))}
-              </TechStack>
-            </ProjectCard>
+              </TagGroup>
+                <ButtonContainer>
+                  <TextIconButton
+                    label="GitHub"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} GitHub`}
+                  >
+                  <GitHubIcon />
+                  <span>GitHub</span>
+                  </TextIconButton>
+                  <TextIconButton
+                    label="Live Demo"
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} Live Demo`}
+                  >
+                  <ExternalLinkIcon />
+                  <span>Live Demo</span>
+                </TextIconButton>
+              </ButtonContainer>
+            </StyledCategory>
           ))}
-        </ProjectsGrid>
+        </Grid>
       </Container>
     </Section>
   );
