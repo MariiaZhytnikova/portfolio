@@ -13,10 +13,11 @@ import { HeadingLG } from "../components/ui/Typography";
 
 
 const skills = {
-  frontend: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "Redux"],
-  backend: ["Node.js", "Python", "Express", "Django", "REST APIs", "GraphQL"],
-  database: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "MySQL"],
-  devops: ["Docker", "AWS", "Git", "CI/CD", "Kubernetes", "Linux"],
+  frontend: ["React", "TypeScript", "Tailwind CSS", "Styled Components"],
+  backend: ["Node.js", "Python", "Express", "Fastify", "REST APIs"],
+  database: ["PostgreSQL", "MariaDB", "Redis", "SQLite", "MySQL"],
+  devops: ["Docker", "Git", "CI/CD", "Linux", "Nginx"],
+  systems: ["C", "C++", "POSIX", "Low-level programming"],
 };
 
 type SkillsProps = {
@@ -25,7 +26,7 @@ type SkillsProps = {
 
 export function Skills({ id }: SkillsProps) {
   return (
-    <Section id={id} bg={theme.colors.surfaceSoft}>
+    <Section id={id} $bg={theme.colors.surfaceSoft}>
       <Container>
         <Card height="auto">
         <HeadingLG>Skills & Technologies</HeadingLG>
@@ -59,8 +60,17 @@ export function Skills({ id }: SkillsProps) {
 
           <Category>
             <GradientSubtitleText>DevOps & Tools</GradientSubtitleText>
+              <TagGroup>
+                {skills.devops.map((skill) => (
+                  <Tag key={skill}>{skill}</Tag>
+                ))}
+              </TagGroup>
+          </Category>
+
+          <Category>
+            <GradientSubtitleText>Systems</GradientSubtitleText>
             <TagGroup>
-              {skills.devops.map((skill) => (
+              {skills.systems.map((skill) => (
                 <Tag key={skill}>{skill}</Tag>
               ))}
             </TagGroup>

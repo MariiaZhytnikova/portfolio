@@ -2,12 +2,12 @@
 import styled from "styled-components";
 
 export const Card = styled.div<{
-  padding?: string;
+  $padding?: string;
   height?: string;
   textAlign?: "left" | "center" | "right";
 }>`
   color: ${({ theme }) => theme.colors.text};
-  padding: ${({ padding, theme }) => padding || theme.spacing.xl};
+  padding: ${({ $padding, theme }) => $padding || theme.spacing.xl};
   min-height: auto;
   height: ${({ height }) => height || "100vh"};
   text-align: ${({ textAlign }) => textAlign || "left"};

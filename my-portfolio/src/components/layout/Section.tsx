@@ -6,6 +6,6 @@ const SectionWrapper = styled.section<{ bg?: string }>`
   padding: ${({ theme }) => theme.spacing.xlTwo};
 `;
 
-export function Section({ id, children, bg }: { id?: string; children: React.ReactNode; bg?: string }) {
+export function Section({ id, children, bg }: { id?: string; children: React.ReactNode; $bg?: string }) {
   return <SectionWrapper id={id} bg={bg}>{children}</SectionWrapper>;
 }

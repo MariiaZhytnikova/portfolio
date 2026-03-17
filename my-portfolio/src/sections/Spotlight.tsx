@@ -24,13 +24,14 @@ type SpotlightProps = {
   return (
     <Section id={id}>
       <Container>
-        <Card padding="100px 32px">
+        <Card $padding="100px 32px">
           <GradientHeading>Hi, I'm Maria</GradientHeading>
           <SubtitleText>Software Engineer</SubtitleText>
           <BodyText>
-            I build exceptional digital experiences with modern web technologies.
-            Specialized in full-stack development, cloud architecture, and creating
-            scalable solutions that make a difference.
+            Software engineering student turning ideas into real, working software. 
+            I explore systems, debug issues, and refine solutions — everything from 
+            low-level programs to full-stack applications. I learn by doing, experimenting, 
+            and improving along the way.
           </BodyText>
           <ButtonContainer>
             <PrimaryButton href="#contacts">

@@ -55,7 +55,7 @@ export function Backstory({ id }: BackstoryProps) {
         <Card height="auto">
           <HeadingLG>My Journey</HeadingLG>
           <BodyText>
-            Every developer has a unique story. Here's mine—from curiosity to career, 
+            Every developer has a unique story. Here's mine — from curiosity to career, 
             and the pivotal moments that shaped who I am today.
           </BodyText>
           

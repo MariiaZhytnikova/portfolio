@@ -29,6 +29,8 @@ export const BodyText = styled.p`
   font-weight: ${({ theme }) => theme.typography.body.weight};
   color: ${({ theme }) => theme.colors.muted};
   line-height: 1.6;
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  width: 75%;
 `;
 
 /* GRADIENT HEADING */
