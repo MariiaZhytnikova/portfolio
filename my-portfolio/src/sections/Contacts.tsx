@@ -163,11 +163,11 @@ export function Contacts({ id }: ContactsProps) {
               <ContactList>
                 <ContactItem>
                   <MailIcon />
-                  <ContactText>alex.chen@email.com</ContactText>
+                  <ContactText>allusio@gmail.com</ContactText>
                 </ContactItem>
                 <ContactItem>
                   <PhoneIcon />
-                  <ContactText>+358 00 00 00 000</ContactText>
+                  <ContactText>+358 46 57 60 200</ContactText>
                 </ContactItem>
                 <ContactItem>
                   <LocationIcon />
