@@ -18,6 +18,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
 
   html {
     scroll-behavior: smooth;
+    font-size: 16px;
   }
 
   body {
@@ -25,6 +26,8 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
     color: ${({theme:n})=>n.colors.text};
     font-family: Inter, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
   }
 
   a {
