@@ -1,9 +1,8 @@
 // src/pages/HomePage.tsx
 import { About } from "../sections/About";
-import { Backstory } from "../sections/Backstory";
 import { Skills } from "../sections/Skills";
 import { Projects } from "../sections/Projects";
-import { Contacts } from "../sections/Contacts";
+import { GetInTouch } from "../sections/GetInTouch";
 import { Spotlight } from "../sections/Spotlight";
 
 export function HomePage() {
@@ -11,10 +10,9 @@ export function HomePage() {
     <>
       <Spotlight id="spotlight" />
       <About id="about" />
-      <Skills id="skills" />
-      <Backstory id="backstory" />
       <Projects id="projects" />
-      <Contacts id="contacts" />
+      <Skills id="skills" />
+      <GetInTouch id="getintouch" />
     </>
   );
 }

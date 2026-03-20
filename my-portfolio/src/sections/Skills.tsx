@@ -1,20 +1,16 @@
 // src/sections/About.tsx
 import { theme } from "../theme/theme";
-import { GradientSubtitleText } from "../components/ui/Typography";
+import { GradientSubtitleText, HeadingLG } from "../components/ui/Typography";
 import { Section } from "../components/layout/Section";
 import { Container } from "../components/ui/Container";
 import { Card } from "../components/ui/Card";
-import { Grid } from "../components/ui/Grid";
-import { Category } from "../components/ui/Grid";
+import { Grid, Category } from "../components/ui/Grid";
 import { TagGroup } from "../components/ui/TagGroup";
 import { Tag } from "../components/ui/Tag";
-import { HeadingLG } from "../components/ui/Typography";
-
-
 
 const skills = {
   frontend: ["React", "TypeScript", "Tailwind CSS", "Styled Components"],
-  backend: ["Node.js", "Python", "Express", "Fastify", "REST APIs"],
+  backend: ["Node.js", "TypeScript", "Go", "Python", "Express", "Fastify", "REST APIs"],
   database: ["PostgreSQL", "MariaDB", "Redis", "SQLite", "MySQL"],
   devops: ["Docker", "Git", "CI/CD", "Linux", "Nginx"],
   systems: ["C", "C++", "POSIX", "Low-level programming"],
@@ -27,7 +23,7 @@ type SkillsProps = {
 export function Skills({ id }: SkillsProps) {
   return (
     <Section id={id} $bg={theme.colors.surfaceSoft}>
-      <Container>
+      <Container $paddingTop="40px" $paddingBottom="40px">
         <Card height="auto">
         <HeadingLG>Skills & Technologies</HeadingLG>
         <Grid>

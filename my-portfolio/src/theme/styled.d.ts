@@ -15,6 +15,7 @@ declare module "styled-components" {
     spacing: StringMap<typeof tokens.spacing>;
     gradients: StringMap<typeof tokens.gradients>;
     button: StringMap<typeof tokens.button>;
+    transitions: StringMap<typeof tokens.transitions>;
     container: StringMap<typeof tokens.container>;
     shadows: StringMap<typeof tokens.shadows>;
   }

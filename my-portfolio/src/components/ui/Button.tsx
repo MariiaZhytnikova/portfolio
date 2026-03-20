@@ -1,20 +1,32 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
-export const BaseButton = styled.a`
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.md};
+  margin-top: ${({ theme }) => theme.spacing.md};
+`;
+
+export const BaseButton = styled(motion.button)`
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  gap: ${({ theme }) => theme.spacing.sm};
   padding: ${({ theme }) =>
     `${theme.button.paddingY} ${theme.button.paddingX}`};
   border-radius: ${({ theme }) => theme.radius.pill};
-  font-weight: 600;
+  border: none;
+  font-weight: ${({ theme }) => theme.button.textWeightL};
   cursor: pointer;
-  transition: ${({ theme }) => theme.button.transition};
+  transition: ${({ theme }) => theme.transitions.fast};
   text-decoration: none;
   white-space: nowrap;
+  width: ${({ theme }) => theme.button.width};
 `;
 
 export const PrimaryButton = styled(BaseButton)`
   background: ${({ theme }) => theme.gradients.primary};
-  color: white;
-  display: inline-block;
+  color: ${({ theme }) => theme.colors.accent};
 
   &:hover {
     transform: ${({ theme }) => theme.button.hoverLift};
@@ -26,7 +38,6 @@ export const SecondaryButton = styled(BaseButton)`
   background: transparent;
   color: ${({ theme }) => theme.colors.text};
   border: 2px solid ${({ theme }) => theme.colors.surface};
-  display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
 
@@ -50,36 +61,36 @@ export const TextIconButton = styled.a<TextIconButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* space between icon and text */
-  padding: 12px 20px;
+  gap: ${({ theme }) => theme.spacing.sm};
+  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
   background: ${({ theme }) => theme.colors.surface};
   border: 2px solid ${({ theme }) => theme.colors.surface};
   border-radius: ${({ theme }) => theme.radius.md};
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  transition: all 0.3s ease;
+  transition: ${({ theme }) => theme.transitions.fast};
 
   color: ${({ theme }) => theme.colors.textSoft};
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: ${({ theme }) => theme.button.textWeightM};
+  font-size: ${({ theme }) => theme.button.textSize};
   text-decoration: none;
 
   svg {
     width: 20px;
     height: 20px;
     stroke: currentColor;
-    transition: transform 0.3s ease;
+    transition: ${({ theme }) => theme.transitions.fast};
   }
 
   span {
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: ${({ theme }) => theme.transitions.fast};
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.purple};
-    color: ${({ theme }) => theme.colors.purple};
+    // border-color: ${({ theme }) => theme.colors.purple};
+    // color: ${({ theme }) => theme.colors.purple};
   }
 
   &:hover span {
@@ -87,42 +98,88 @@ export const TextIconButton = styled.a<TextIconButtonProps>`
   }
 
   &:hover svg {
-    transform: translateX(6px); /* optional: move icon with text */
-    color: ${({ theme }) => theme.colors.purple};
+    transform: translateX(6px); /* move icon with text */
+    // color: ${({ theme }) => theme.colors.purple};
   }
 `;
 
-export const IconButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: ${({ theme }) => theme.colors.surface};
-  border: 2px solid ${({ theme }) => theme.colors.surface};
-  border-radius: ${({ theme }) => theme.radius.md};
-  margin-top: ${({ theme }) => theme.spacing.md};
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-  transition: ${({ theme }) => theme.button.transition};
+export const AnimatedTextIconButton = styled(TextIconButton)`
+  position: relative;
+  overflow: hidden;
 
-  svg {
-    width: 20px;
-    height: 20px;
-    stroke: ${({ theme }) => theme.colors.text};
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      ${({ theme }) => theme.colors.surface},
+      ${({ theme }) => theme.colors.surface},
+      ${({ theme }) => theme.colors.surface},
+      ${({ theme }) => theme.colors.orange},
+      ${({ theme }) => theme.colors.purple},
+      ${({ theme }) => theme.colors.blue},
+      ${({ theme }) => theme.colors.orange},
+      ${({ theme }) => theme.colors.surface},
+      ${({ theme }) => theme.colors.surface},
+      ${({ theme }) => theme.colors.surface}
+    );
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
   }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  // &:hover::before {
+  //   animation: backgroundRunOnce 0.3s linear forwards;
+  // }
+
+  // @keyframes backgroundRunOnce {
+  //   0% {
+  //     opacity: 0;
+  //     background-position: 200% 50%;
+  //   }
+  //   20% {
+  //     opacity: 1;
+  //     background-position: 150% 50%;
+  //   }
+  //   50% {
+  //     opacity: 1;
+  //     background-position: 100% 50%;
+  //   }
+  //   80% {
+  //     opacity: 0.5;
+  //     background-position: 50% 50%;
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //     background-position: 0% 50%;
+  //   }
+  // }
+
+  // @keyframes fadeOpacity {
+  //   0% {
+  //     opacity: 0;
+  //   }
+  //   20% {
+  //     opacity: 1;
+  //   }
+  //   80% {
+  //     opacity: 1;
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //   }
+  // }
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.purple};
-    transform: ${({ theme }) => theme.button.hoverLift};
+    color: ${({ theme }) => theme.colors.purple};
   }
-
-  &:hover svg {
-    stroke: ${({ theme }) => theme.colors.purple};
-  }
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing.md};
-  margin-top: ${({ theme }) => theme.spacing.md};
 `;

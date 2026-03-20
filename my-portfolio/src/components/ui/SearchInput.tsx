@@ -14,7 +14,7 @@ export const SearchInput = styled.input`
   background: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.textSoft};
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: ${({ theme }) => theme.transitions.input};
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.muted};
@@ -37,7 +37,7 @@ export const MagnifierIcon = styled.span`
   transform: translateY(-50%) scale(1);
   font-size: 16px;
   color: ${({ theme }) => theme.colors.muted};
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: ${({ theme }) => theme.transitions.input};
 
   ${SearchWrapper}:hover & {
     transform: translateY(-50%) scale(1.2);
