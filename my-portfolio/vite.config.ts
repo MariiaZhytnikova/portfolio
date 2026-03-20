@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react'
 import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: "/portfolio/",
-  plugins: [react(), svgr()],
+export default defineConfig(({ mode }) => {
+  return {
+    base: mode === 'production' ? '/portfolio/' : '/',
+    plugins: [react(), svgr()],
+  }
 })
