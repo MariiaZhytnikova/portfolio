@@ -7,6 +7,7 @@ export const darkTheme = {
 export const lightTheme = {
   ...tokens,
   colors: {
+    ...tokens.colors,
     bg: "#f8fafc",
     surface: "#ffffff",
     text: "#0f172a",

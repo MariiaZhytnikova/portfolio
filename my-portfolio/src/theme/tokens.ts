@@ -73,8 +73,8 @@ export const tokens = {
     iconSize: "18px",
     hoverLift: "translateY(-2px)",
     width: "175px",
-    textWeightL: 600,
-    textWeightM: 500,
+    textWeightL: "600",
+    textWeightM: "500",
     textSize: "0.95rem",
   },
 
