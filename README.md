@@ -2,6 +2,9 @@
 
 A modern, dark-themed developer portfolio built with React 19, TypeScript, Vite, and styled-components.
 
+life-link:
+https://mariiazhytnikova.github.io/portfolio/
+
 ## Features
 - **Single Page Application** with React Router
 - **Dark Side Developer** aesthetic (default dark mode, purple-orange accent gradient)
