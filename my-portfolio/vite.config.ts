@@ -4,6 +4,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/portfolio/",
+  base: "/portfolio/my-portfolio/",
   plugins: [react(), svgr()],
 })
