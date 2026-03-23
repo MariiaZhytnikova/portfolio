@@ -3,8 +3,8 @@ import { Mail } from "lucide-react";
 
 export const socialLinks = [
   { href: "https://github.com/MariiaZhytnikova", Icon: GitHub, label: "GitHub" },
-  { href: "https://linkedin.com/in/your-profile", Icon: LinkedIn, label: "LinkedIn" },
-  { href: "mailto:your.email@example.com", Icon: Mail, label: "Email" },
+  { href: "https://www.linkedin.com/in/mariia-zhytnikova", Icon: LinkedIn, label: "LinkedIn" },
+  { href: "mailto:allusio@gmail.com", Icon: Mail, label: "Email" },
 ];
 
 export function GitHub(props: React.SVGProps<SVGSVGElement>) {
