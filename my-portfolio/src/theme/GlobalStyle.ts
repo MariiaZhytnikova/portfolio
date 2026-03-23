@@ -9,7 +9,11 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 16px !important; /* Reinforce base font size */
+  }
+
+  body {
+    font-size: 1rem !important; /* Ensure body uses root font size */
   }
 
   body {
