@@ -26,4 +26,5 @@ dist-ssr
 # Copilot instructions file
 .copilot/*
 copilot-instructions.md
-.github/copilot-instructions.md
+.github/instructions
+.github/instructions/cop.instructions.md
