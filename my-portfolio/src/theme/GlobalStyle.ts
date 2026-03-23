@@ -7,13 +7,22 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
-  html {
+  html, body, #root {
     scroll-behavior: smooth;
-    font-size: 16px !important; /* Reinforce base font size */
+    font-size: 16px !important;
+    font-family: Inter, system-ui, sans-serif;
+    font-weight: 400;
+    transform: none !important;
+    zoom: 1 !important;
+    scale: 1 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
   }
 
   body {
-    font-size: 1rem !important; /* Ensure body uses root font size */
+    font-size: 1rem !important;
   }
 
   body {
