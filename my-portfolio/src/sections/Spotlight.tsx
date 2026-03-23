@@ -45,7 +45,7 @@ type SpotlightProps = {
             </PrimaryButton>
             <SecondaryButton
                 as="a"
-                href="/CV-Mariia_Zhytnikova.pdf"
+                href={`${import.meta.env.BASE_URL}CV-Mariia_Zhytnikova.pdf`}
                 download
                 aria-label="Download CV as PDF"
               >
