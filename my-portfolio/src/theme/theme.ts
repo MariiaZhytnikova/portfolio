@@ -10,11 +10,13 @@ export const lightTheme = {
     ...tokens.colors,
     bg: "#f8fafc",
     surface: "#ffffff",
+    surfaceSoft: "#e5e7eb80",
     text: "#0f172a",
-    muted: "#64748b",
-    accent: "#4f46e5",
-    accentSoft: "#6366f1",
+    textSoft: "#575555",
+    muted: "#242f3e",
+    accent: "#0A0A0A",
   },
 };
 
 export const theme = darkTheme;
+

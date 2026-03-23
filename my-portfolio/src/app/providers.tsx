@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../theme/GlobalStyle";
 import { darkTheme, lightTheme } from "../theme/theme";
@@ -23,7 +23,20 @@ export function useThemeMode() {
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [mode, setMode] = useState<ThemeMode>("dark");
+  // Read initial mode from localStorage, fallback to dark
+  const getInitialMode = (): ThemeMode => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("theme-mode");
+      if (stored === "light" || stored === "dark") return stored;
+    }
+    return "dark";
+  };
+
+  const [mode, setMode] = useState<ThemeMode>(getInitialMode);
+
+  useEffect(() => {
+    localStorage.setItem("theme-mode", mode);
+  }, [mode]);
 
   const toggleMode = () => {
     setMode((currentMode) => (currentMode === "dark" ? "light" : "dark"));

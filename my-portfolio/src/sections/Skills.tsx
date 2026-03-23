@@ -1,5 +1,5 @@
 // src/sections/About.tsx
-import { theme } from "../theme/theme";
+import { useTheme } from "styled-components";
 import { GradientSubtitleText, HeadingLG } from "../components/ui/Typography";
 import { Section } from "../components/layout/Section";
 import { Container } from "../components/ui/Container";
@@ -21,6 +21,7 @@ type SkillsProps = {
 };
 
 export function Skills({ id }: SkillsProps) {
+  const theme = useTheme();
   return (
     <Section id={id} $bg={theme.colors.surfaceSoft}>
       <Container $paddingTop="40px" $paddingBottom="40px">
