@@ -34,6 +34,17 @@ export const PrimaryButton = styled(BaseButton)`
   }
 `;
 
+export const PrimaryWideButton = styled(BaseButton)`
+  width: 75%;
+  background: ${({ theme }) => theme.gradients.primary};
+  color: ${({ theme }) => theme.colors.accent};
+
+  &:hover {
+    transform: ${({ theme }) => theme.button.hoverLift};
+    box-shadow: 0 4px 12px ${({ theme }) => theme.colors.purple}66;
+  }
+`;
+
 export const SecondaryButton = styled(BaseButton)`
   background: transparent;
   color: ${({ theme }) => theme.colors.text};

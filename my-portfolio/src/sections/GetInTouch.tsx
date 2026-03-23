@@ -1,16 +1,17 @@
 // src/sections/Contacts.tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { User, Mail, MessageSquare, Send } from "lucide-react";
 import { Section } from "../components/layout/Section.tsx";
 import { Container } from "../components/ui/Container.tsx";
 import { Card } from "../components/ui/Card.tsx";
 import { HeadingLG, BodyTextSm } from "../components/ui/Typography";
-import { PrimaryButton } from "../components/ui/Button.tsx";
+import { PrimaryWideButton } from "../components/ui/Button.tsx";
 import { SocialButtons } from "../components/ui/SosialButtons.tsx";
 import { socialLinks } from "../components/data/SocialLinksData.tsx";
 import { ContactList } from "../components/ui/ContactList.tsx";
 import { contactInfo } from "../components/data/ContactInfoData.tsx";
 import { FieldWrapper } from "../components/ui/MotionWrapper.tsx";
+import { CenteredWrapper } from "../components/ui/CenteredWrapper.tsx";
 import {
   Form,
   InlineField,
@@ -32,15 +33,38 @@ type GetInTouchProps = {
 export function GetInTouch({ id }: GetInTouchProps) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  useEffect(() => {
+    if (status !== "idle") {
+      const timer = setTimeout(() => setStatus("idle"), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+
+    setStatus("idle");
+
+    const response = await fetch("https://formspree.io/f/mlgpyyjd", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      setStatus("error");
+    }
   };
 
   return (
@@ -123,9 +147,27 @@ export function GetInTouch({ id }: GetInTouchProps) {
             </FieldWrapper>
 
             {/* Submit */}
-            <PrimaryButton type="submit">
-              Send Message <Send size={20} />
-            </PrimaryButton>
+            <CenteredWrapper>
+              <PrimaryWideButton type="submit">
+                {status === "idle" && (
+                  <>
+                    <span style={{ fontSize: 16, lineHeight: 1 }}>Send Message</span>
+                    <Send size={20} />
+                  </>
+                )}
+
+                {status === "success" && (
+                  <>
+                    <Send size={20} />
+                    <span style={{ fontSize: 16, lineHeight: 1 }}>Sent!</span>
+                  </>
+                )}
+
+                {status === "error" && (
+                  <span style={{ fontSize: 16, lineHeight: 1 }}>❌ Try again</span>
+                )}
+              </PrimaryWideButton>
+            </CenteredWrapper>
           </Form>
           </RightColumn>
           </ColumnGrid>
