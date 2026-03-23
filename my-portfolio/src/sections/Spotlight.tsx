@@ -45,7 +45,7 @@ type SpotlightProps = {
             </PrimaryButton>
             <SecondaryButton
                 as="a"
-                href="/cv.pdf"
+                href="/CV-Mariia_Zhytnikova.pdf"
                 download
                 aria-label="Download CV as PDF"
               >
