@@ -1,4 +1,7 @@
 // src/sections/Spotlight.tsx
+import { useRef, useEffect } from "react";
+import { WordEngine } from "../engine/wordEngine";
+import { useWordEngine } from "../engine/WordEngineContext";
 import { Section } from "../components/layout/Section";
 import { Container } from "../components/ui/Container";
 import { Card } from "../components/ui/Card";
@@ -20,11 +23,65 @@ type SpotlightProps = {
   id?: string;
 };
 
-  export function Spotlight({ id }: SpotlightProps) {
+export function Spotlight({ id }: SpotlightProps) {
+  const canvasRef = useRef<HTMLDivElement | null>(null);
+  const engineRef = useRef<WordEngine | null>(null);
+
+  const { setEngine } = useWordEngine();
+
+  useEffect(() => {
+    if (!canvasRef.current) return;
+
+    let engine: WordEngine;
+    let animationFrameId = 0;
+
+    engine = new WordEngine(canvasRef.current);
+    engineRef.current = engine;
+
+    // SHARE ENGINE GLOBALLY
+    setEngine(engine);
+
+    // TEST WORD
+    engine.addWord("Hello");
+
+    const tick = () => {
+      if (engine) {
+        engine.update();
+      }
+
+      animationFrameId = window.requestAnimationFrame(tick);
+    };
+
+    animationFrameId = window.requestAnimationFrame(tick);
+
+    return () => {
+      setEngine(null);
+
+      engineRef.current?.destroy();
+      window.cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
   return (
     <Section id={id}>
       <Container>
-        <Card $padding="100px 32px">
+        <Card 
+          $padding="100px 32px"
+          style={{
+          position: "relative",
+          overflow: "hidden",
+        }}
+        >
+          {/* PIXI BACKGROUND LAYER */}
+          <div
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 0,
+              pointerEvents: "none",
+            }}
+          />
           <GradientHeading>Hi, I'm Maria</GradientHeading>
           <SubtitleText>Software Engineer</SubtitleText>
           <BodyText>

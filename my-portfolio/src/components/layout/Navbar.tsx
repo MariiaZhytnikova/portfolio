@@ -1,5 +1,7 @@
 // src/components/layout/Navbar.tsx
 import { useThemeMode } from "../../app/providers";
+import { useState } from "react";
+import { useWordEngine } from "../../engine/WordEngineContext";
 import {
   NavWrapper,
   NavInner,
@@ -33,6 +35,8 @@ export function Navbar({
   showThemeToggle = true,
 }: NavbarProps) {
   const { mode, toggleMode } = useThemeMode();
+  const [searchValue, setSearchValue] = useState("");
+  const { engine } = useWordEngine();
 
   return (
     <NavWrapper>
@@ -46,7 +50,20 @@ export function Navbar({
           ))}
         </NavLinks>
         <NavControls>
-          {showSearch && <SearchInput type="search" placeholder="Search..." />}
+          {showSearch && 
+            <SearchInput
+              type="search"
+              placeholder="Try me..."
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && searchValue.trim()) {
+                  engine?.addWord(searchValue);
+
+                  setSearchValue("");
+                }
+              }}
+            /> }
           {showThemeToggle && (
             <ThemeToggleSlider
               onClick={toggleMode}
