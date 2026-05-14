@@ -1,27 +1,58 @@
-// src/components/data/Projects.tsx
+// src/components/data/ProjectsData.tsx
+
+import MazeImg from "../../assets/Maze_is_Lava.png";
+import DishDashImg from "../../assets/DishDash.png";
+import HiveImg from "../../assets/Hive_Game.png";
 
 export const projects = [
   {
     id: 1,
-    title: "Here will be Transcendence",
-    description: "A full-stack web application built with modern technologies.",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    github: "https://github.com/MariiaZhytnikova/project-alpha",
-    live: "https://project-alpha.example.com",
+    title: "Maze is lava",
+    image: MazeImg,
+    description: "A full-stack multiplayer web-game with auth, chat and friends system",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Socket.io",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Fastify",
+      "TypeORM",
+      "PostgreSQL",
+      "JWT",
+      "Swagger/OpenAPI",
+      "Jest",
+      "GitHub actions",
+    ],
+    github: "https://github.com/Transcendence-surprise",
+    live: "https://valinor.ink",
   },
   {
     id: 2,
     title: "DishDash",
+    image: DishDashImg,
     description: "🌱 A small tool with a big impact on food waste ",
-    tech: ["TypeScript", "React", "Go"],
+    tech: [
+      "Node.js",
+      "Vite",
+      "TypeScript",
+      "React",
+      "Go",
+      "Rest API",
+      "GitHub actions",
+      "Deployment: GitHub Pages, Fly.io",
+    ],
     github: "https://github.com/MariiaZhytnikova/DishDash",
     live: "https://mariiazhytnikova.github.io/DishDash/",
   },
   {
     id: 3,
     title: "Hive",
+    image: HiveImg,
     description: "the Hive game, designed by John Yianni",
-    tech: ["Typescript"],
+    tech: ["Node.js", "Vite", "TypeScript", "Deployment: GitHub Pages"],
     github: "https://github.com/MariiaZhytnikova/Hive-abstract-game",
     live: "https://mariiazhytnikova.github.io/Hive-abstract-game/",
   },

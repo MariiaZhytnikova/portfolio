@@ -1,6 +1,7 @@
 // src/components/layout/Layout.tsx
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./Navbar";
+import { WordEngineProvider } from "../../engine/WordEngineContext";
 
 export function Layout() {
   const links = [
@@ -10,7 +11,7 @@ export function Layout() {
   ];
 
   return (
-    <>
+    <WordEngineProvider>
       <Navbar 
         logoText="Maria Zhytnikova" 
         links={links} 
@@ -18,6 +19,6 @@ export function Layout() {
         showThemeToggle={true}
       />
       <Outlet />
-    </>
+    </WordEngineProvider>
   );
 }

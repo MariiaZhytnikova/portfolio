@@ -29,6 +29,19 @@ export function Projects({ id }: ProjectsProps) {
               </div>
               <SubtitleText>{project.title}</SubtitleText>
               <BodyText>{project.description}</BodyText>
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  style={{
+                    width: "100%",
+                    height: "180px",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    marginTop: "12px",
+                  }}
+                />
+              )}
               <TagGroup>
                 {project.tech.map((tech) => (
                   <Tag key={tech}>{tech}</Tag>
