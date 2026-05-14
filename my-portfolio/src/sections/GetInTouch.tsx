@@ -1,17 +1,20 @@
 // src/sections/Contacts.tsx
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { User, Mail, MessageSquare, Send } from "lucide-react";
 import { Section } from "../components/layout/Section.tsx";
 import { Container } from "../components/ui/Container.tsx";
 import { Card } from "../components/ui/Card.tsx";
 import { HeadingLG, BodyTextSm } from "../components/ui/Typography";
-import { PrimaryWideButton } from "../components/ui/Button.tsx";
+import { PrimaryWideButton, CloseButton } from "../components/ui/Button.tsx";
 import { SocialButtons } from "../components/ui/SosialButtons.tsx";
 import { socialLinks } from "../components/data/SocialLinksData.tsx";
 import { ContactList } from "../components/ui/ContactList.tsx";
 import { contactInfo } from "../components/data/ContactInfoData.tsx";
 import { FieldWrapper } from "../components/ui/MotionWrapper.tsx";
 import { CenteredWrapper } from "../components/ui/CenteredWrapper.tsx";
+import { privacyAgreementText } from "../pages/PrivacyAgreement.ts";
+import { termsOfServiceText } from "../pages/TermsOfService.ts";
 import {
   Form,
   InlineField,
@@ -25,6 +28,9 @@ import {
   LeftColumn,
   RightColumn,
 } from "../components/ui/Columns.tsx";
+import { Separator } from "../components/ui/Separator.tsx";
+import { ModalOverlay, ModalContent } from "../components/ui/Modals.tsx";
+import { DocLink, FooterLinks } from "../components/ui/Nav";
 
 type GetInTouchProps = {
   id?: string;
@@ -34,6 +40,9 @@ export function GetInTouch({ id }: GetInTouchProps) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [modalTop, setModalTop] = useState(0);
 
   useEffect(() => {
     if (status !== "idle") {
@@ -41,6 +50,23 @@ export function GetInTouch({ id }: GetInTouchProps) {
       return () => clearTimeout(timer);
     }
   }, [status]);
+
+  useEffect(() => {
+    if (showPrivacy || showTerms) {
+      const syncModalTop = () => {
+        setModalTop(window.scrollY);
+      };
+
+      syncModalTop();
+      window.addEventListener("scroll", syncModalTop, { passive: true });
+      window.addEventListener("resize", syncModalTop);
+
+      return () => {
+        window.removeEventListener("scroll", syncModalTop);
+        window.removeEventListener("resize", syncModalTop);
+      };
+    }
+  }, [showPrivacy, showTerms]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -169,10 +195,56 @@ export function GetInTouch({ id }: GetInTouchProps) {
               </PrimaryWideButton>
             </CenteredWrapper>
           </Form>
+          <FooterLinks>
+            <span style={{ fontSize: 12, lineHeight: 1 }}>By using this form, you agree to our </span>
+            <DocLink 
+              type="button"
+              onClick={() => setShowPrivacy(true)}
+            >
+              Privacy Agreement
+            </DocLink>
+            <Separator>•</Separator>
+            <DocLink 
+              type="button"
+              onClick={() => setShowTerms(true)}
+            >
+              Terms of Service
+            </DocLink>
+          </FooterLinks>
           </RightColumn>
           </ColumnGrid>
         </Card>
       </Container>
+      
+      {/* Privacy Modal - rendered via portal */}
+      {showPrivacy && createPortal(
+        <ModalOverlay $top={modalTop} onClick={() => setShowPrivacy(false)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={() => setShowPrivacy(false)}>
+              ×
+            </CloseButton>
+            <pre>
+              {privacyAgreementText}
+            </pre>
+          </ModalContent>
+        </ModalOverlay>,
+        document.body
+      )}
+
+      {/* Terms Modal - rendered via portal */}
+      {showTerms && createPortal(
+        <ModalOverlay $top={modalTop} onClick={() => setShowTerms(false)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={() => setShowTerms(false)}>
+              ×
+            </CloseButton>
+            <pre>
+              {termsOfServiceText}
+            </pre>
+          </ModalContent>
+        </ModalOverlay>,
+        document.body
+      )}
     </Section>
   );
 }
