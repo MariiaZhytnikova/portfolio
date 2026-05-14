@@ -1,77 +1,169 @@
 // src/engine/wordEngine.ts
-type Word = {
-  id: string;
-  text: string;
-  x: number;
-  y: number;
-  sprite: HTMLSpanElement;
-};
+import Matter, { Bodies, World, Engine } from "matter-js";
+import type { Word } from "./types/Word";
+import { tokens } from "../theme/tokens";
+import { randomBetween, randomItem } from "./utils";
+import { ParticleSystem } from "./particles";
+import { MousePhysics } from "./mousePhysics";
+import { createBounds } from "./bounds";
+import { createWordElement } from "./createWordElement";
+import { PHYSICS } from "./types/config";
+import { renderWord } from "./renderWord";
+import { updateWordLife } from "./updateWordLife";
+import { explodeWords } from "./explodeWords";
 
 export class WordEngine {
+  private mouse: MousePhysics;
+  private particles: ParticleSystem;
+
   private container: HTMLDivElement;
   private words: Map<string, Word> = new Map();
 
+
+  private engine: Engine = Matter.Engine.create();
+  private world: World = this.engine.world;
+
+  private canvas = document.createElement("canvas");
+  private ctx = this.canvas.getContext("2d");
+
+  private colors = [
+    tokens.colors.orange,
+    tokens.colors.purple,
+    tokens.colors.blue,
+    tokens.colors.accent,
+  ];
+
   constructor(container: HTMLDivElement) {
     this.container = container;
+
+    this.mouse= new MousePhysics(container);
+    this.particles = new ParticleSystem(container);
+
+    this.engine.gravity.y = PHYSICS.gravity;
+    this.engine.gravity.scale = 0.001;
+
+    createBounds(
+      this.engine,
+      this.getWidth(),
+      this.getHeight()
+    );
+
+    this.container.addEventListener("click", (e) => {
+      const rect = this.container.getBoundingClientRect();
+
+      explodeWords({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+        radius: PHYSICS.explodeRadius,
+        power: PHYSICS.explodePower,
+        world: this.world,
+        words: this.words,
+        particles: this.particles,
+      });
+    });
   }
 
-  private isReady() {
-    return Boolean(this.container);
+  // ----------------------------
+  // UTILS
+  // ----------------------------
+
+  private getHeight() {
+    return this.container.getBoundingClientRect().height;
   }
+
+  private getWidth() {
+    return this.container.getBoundingClientRect().width;
+  }
+
+  private measureTextWidth(text: string, fontSize: number): number {
+    if (!this.ctx) return text.length * (fontSize / 2);
+
+    this.ctx.font = `${fontSize}px sans-serif`;
+    return this.ctx.measureText(text).width;
+  }
+
+  // ----------------------------
+  // ADD WORD
+  // ----------------------------
 
   addWord(text: string) {
-    if (!this.isReady()) {
-      console.warn("Pixi not ready yet, skipping word:", text);
-      return;
-    }
-
     const id = Math.random().toString(36);
 
-    const x = Math.random() * this.container.clientWidth;
-    const y = -20;
+    const fontSize = randomBetween(12, 60)
+    const color = randomItem(this.colors)
+    const width = this.measureTextWidth(text, fontSize);
 
-    const word = document.createElement("span");
-    word.textContent = text;
-    word.style.position = "absolute";
-    word.style.left = `${x}px`;
-    word.style.top = `${y}px`;
-    word.style.color = "#ffffff";
-    word.style.fontSize = "18px";
-    word.style.whiteSpace = "nowrap";
-    word.style.willChange = "transform";
+    const body = Bodies.rectangle(
+      Math.random() * this.getWidth(),
+      -50,
+      width + 10,
+      fontSize + 10,
+      {
+        restitution: 0.6,
+        friction: 0.05,
+        frictionAir: 0.005 + Math.random() * 0.005,
+        density: fontSize / 20,
+      }
+    );
+
+    Matter.Body.setVelocity(body, {
+      x: randomBetween(-5, 5),
+      y: randomBetween(-2, 2),
+    });
+
+    Matter.Body.setAngularVelocity(body, randomBetween(-0.1, 0.1));
+
+    World.add(this.world, body);
+
+    const word = createWordElement(
+      text,
+      color,
+      fontSize
+    );
 
     this.container.appendChild(word);
 
     this.words.set(id, {
       id,
       text,
-      x,
-      y,
       sprite: word,
+      body,
     });
   }
+
+  // ----------------------------
+  // UPDATE
+  // ----------------------------
 
   update() {
-    if (!this.isReady()) return;
+    Matter.Engine.update(this.engine);
 
     this.words.forEach((w) => {
-      w.y += 2;
-      w.sprite.style.transform = `translateY(${w.y}px)`;
+      renderWord(w);
 
-      if (w.y > this.container.clientHeight + 50) {
-        this.container.removeChild(w.sprite);
-        this.words.delete(w.id);
-      }
+      // 💀 death animation
+      updateWordLife({
+        word: w,
+        world: this.world,
+        words: this.words,
+      });
+
+      this.mouse.apply(w.body);
     });
+    this.particles.update();
   }
 
+  // ----------------------------
+  // DESTROY
+  // ----------------------------
+
   destroy() {
-    if (this.isReady()) {
-      this.words.forEach((w) => {
-        w.sprite.remove();
-      });
-    }
+    this.words.forEach((w) => {
+      World.remove(this.world, w.body);
+      w.sprite.remove();
+    });
 
     this.words.clear();
+    this.particles.destroy();
   }
 }

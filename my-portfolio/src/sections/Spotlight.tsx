@@ -38,10 +38,7 @@ export function Spotlight({ id }: SpotlightProps) {
     engine = new WordEngine(canvasRef.current);
     engineRef.current = engine;
 
-    // SHARE ENGINE GLOBALLY
     setEngine(engine);
-
-    // TEST WORD
     engine.addWord("Hello");
 
     const tick = () => {
@@ -62,11 +59,14 @@ export function Spotlight({ id }: SpotlightProps) {
     };
   }, []);
 
+  console.log("canvasRef:", canvasRef.current);
+
   return (
     <Section id={id}>
       <Container>
         <Card 
-          $padding="100px 32px"
+          // $padding="100px 32px 160px"
+          height="clamp(640px, 78vh, 920px)"
           style={{
           position: "relative",
           overflow: "hidden",
@@ -78,8 +78,11 @@ export function Spotlight({ id }: SpotlightProps) {
             style={{
               position: "absolute",
               inset: 0,
-              zIndex: 0,
-              pointerEvents: "none",
+              overflow: "hidden",
+              height: "100%",
+              width: "100%",
+              pointerEvents: "auto",
+              outline: "2px solid red",
             }}
           />
           <GradientHeading>Hi, I'm Maria</GradientHeading>

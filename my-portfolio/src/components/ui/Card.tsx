@@ -11,7 +11,7 @@ export const Card = styled.div<{
   padding: ${({ $padding }) => $padding ?? "0"};
   min-height: auto;
   width: ${({ width }) => width ?? "100%"};
-  height: ${({ height }) => height ?? "100vh"};
+  height: ${({ height }) => height ?? "auto"};
   text-align: ${({ textAlign }) => textAlign ?? "left"};
   display: flex;
   flex-direction: column;
