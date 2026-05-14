@@ -1,6 +1,6 @@
 // src/sections/Spotlight.tsx
 import { useRef, useEffect } from "react";
-import { WordEngine } from "../engine/wordEngine";
+import type { WordEngine } from "../engine/wordEngine";
 import { useWordEngine } from "../engine/WordEngineContext";
 import { Section } from "../components/layout/Section";
 import { Container } from "../components/ui/Container";
@@ -30,28 +30,38 @@ export function Spotlight({ id }: SpotlightProps) {
   const { setEngine } = useWordEngine();
 
   useEffect(() => {
-    if (!canvasRef.current) return;
-
-    let engine: WordEngine;
     let animationFrameId = 0;
+    let cancelled = false;
 
-    engine = new WordEngine(canvasRef.current);
-    engineRef.current = engine;
+    const initializeEngine = async () => {
+      const canvasEl = canvasRef.current;
+      if (!canvasEl) return;
 
-    setEngine(engine);
-    engine.addWord("Hello");
+      const { WordEngine } = await import("../engine/wordEngine");
+      if (cancelled || !canvasEl.isConnected) return;
 
-    const tick = () => {
-      if (engine) {
+      const engine = new WordEngine(canvasEl);
+      engineRef.current = engine;
+
+      setEngine(engine);
+      engine.addWord("Hello");
+
+      const tick = () => {
+        if (cancelled) {
+          return;
+        }
+
         engine.update();
-      }
+        animationFrameId = window.requestAnimationFrame(tick);
+      };
 
       animationFrameId = window.requestAnimationFrame(tick);
     };
 
-    animationFrameId = window.requestAnimationFrame(tick);
+    void initializeEngine();
 
     return () => {
+      cancelled = true;
       setEngine(null);
 
       engineRef.current?.destroy();
