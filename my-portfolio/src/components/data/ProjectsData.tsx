@@ -33,7 +33,7 @@ export const projects = [
     id: 2,
     title: "DishDash",
     image: DishDashImg,
-    description: "🌱 A small tool with a big impact on food waste ",
+    description: "🌱 A small tool with a big impact on food waste (Under development)",
     tech: [
       "Node.js",
       "Vite",
@@ -51,7 +51,7 @@ export const projects = [
     id: 3,
     title: "Hive",
     image: HiveImg,
-    description: "the Hive game, designed by John Yianni",
+    description: "Turn based web-game \"The Hive\", designed by John Yianni",
     tech: ["Node.js", "Vite", "TypeScript", "Deployment: GitHub Pages"],
     github: "https://github.com/MariiaZhytnikova/Hive-abstract-game",
     live: "https://mariiazhytnikova.github.io/Hive-abstract-game/",
