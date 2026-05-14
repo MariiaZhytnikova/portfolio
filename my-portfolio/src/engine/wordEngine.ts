@@ -30,7 +30,7 @@ export class WordEngine {
     tokens.colors.orange,
     tokens.colors.purple,
     tokens.colors.blue,
-    tokens.colors.accent,
+    tokens.colors.text,
   ];
 
   constructor(container: HTMLDivElement) {
