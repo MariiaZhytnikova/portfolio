@@ -64,3 +64,30 @@ export const NavControls = styled.div`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
 `;
+
+export const FooterLinks = styled.div`
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid rgba(161, 161, 161, 0.25);
+  font-size: 12px;
+`;
+
+export const DocLink = styled.button`
+  background: none;
+  border: none;
+  color: ${({ theme }) => theme.colors.accent};
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  padding: 0;
+  font: inherit;
+
+  &:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+`;

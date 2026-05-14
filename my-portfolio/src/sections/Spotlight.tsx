@@ -44,7 +44,7 @@ export function Spotlight({ id }: SpotlightProps) {
       engineRef.current = engine;
 
       setEngine(engine);
-      engine.addWord("Hello");
+      // engine.addWord("Hello");
 
       const tick = () => {
         if (cancelled) {

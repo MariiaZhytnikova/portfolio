@@ -99,18 +99,12 @@ export const TextIconButton = styled.a<TextIconButtonProps>`
     transition: ${({ theme }) => theme.transitions.fast};
   }
 
-  &:hover {
-    // border-color: ${({ theme }) => theme.colors.purple};
-    // color: ${({ theme }) => theme.colors.purple};
-  }
-
   &:hover span {
     transform: translateX(6px); /* move text slightly to right */
   }
 
   &:hover svg {
     transform: translateX(6px); /* move icon with text */
-    // color: ${({ theme }) => theme.colors.purple};
   }
 `;
 
@@ -148,49 +142,29 @@ export const AnimatedTextIconButton = styled(TextIconButton)`
     z-index: 1;
   }
 
-  // &:hover::before {
-  //   animation: backgroundRunOnce 0.3s linear forwards;
-  // }
-
-  // @keyframes backgroundRunOnce {
-  //   0% {
-  //     opacity: 0;
-  //     background-position: 200% 50%;
-  //   }
-  //   20% {
-  //     opacity: 1;
-  //     background-position: 150% 50%;
-  //   }
-  //   50% {
-  //     opacity: 1;
-  //     background-position: 100% 50%;
-  //   }
-  //   80% {
-  //     opacity: 0.5;
-  //     background-position: 50% 50%;
-  //   }
-  //   100% {
-  //     opacity: 0;
-  //     background-position: 0% 50%;
-  //   }
-  // }
-
-  // @keyframes fadeOpacity {
-  //   0% {
-  //     opacity: 0;
-  //   }
-  //   20% {
-  //     opacity: 1;
-  //   }
-  //   80% {
-  //     opacity: 1;
-  //   }
-  //   100% {
-  //     opacity: 0;
-  //   }
-  // }
-
   &:hover {
     color: ${({ theme }) => theme.colors.purple};
+  }
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.text};
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
   }
 `;

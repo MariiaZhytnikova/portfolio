@@ -6,5 +6,4 @@ export const CenteredWrapper = styled.div`
   flex-direction: column;
   align-items: center; /* horizontal centering */
   gap: ${({ theme }) => theme.spacing.sm};
-  padding: ${({ theme }) => theme.spacing.lg};
 `;
