@@ -76,7 +76,7 @@ export function Spotlight({ id }: SpotlightProps) {
       <Container>
         <Card 
           // $padding="100px 32px 160px"
-          height="clamp(750px, 78vh, 920px)"
+          height="clamp(640px, 78vh, 920px)"
           style={{
           position: "relative",
           overflow: "hidden",
