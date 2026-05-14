@@ -10,8 +10,8 @@ export function HomePage() {
     <>
       <Spotlight id="spotlight" />
       <About id="about" />
-      <Projects id="projects" />
       <Skills id="skills" />
+      <Projects id="projects" />
       <GetInTouch id="getintouch" />
     </>
   );
