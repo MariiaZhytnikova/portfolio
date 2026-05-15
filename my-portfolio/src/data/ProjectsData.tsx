@@ -1,8 +1,8 @@
-// src/components/data/ProjectsData.tsx
+// src/data/ProjectsData.tsx
 
-import MazeImg from "../../assets/Maze_is_Lava.png";
-import DishDashImg from "../../assets/DishDash.png";
-import HiveImg from "../../assets/Hive_Game.png";
+import MazeImg from "../assets/Maze_is_Lava.png";
+import DishDashImg from "../assets/DishDash.png";
+import HiveImg from "../assets/Hive_Game.png";
 
 export const projects = [
   {

@@ -6,7 +6,7 @@ import { Section } from "../components/layout/Section";
 import { Container } from "../components/ui/Container";
 import { Card } from "../components/ui/Card";
 import { SocialButtons } from "../components/ui/SosialButtons.tsx";
-import { Download, socialLinks } from "../components/data/SocialLinksData.tsx";
+import { Download, socialLinks } from "../data/SocialLinksData.tsx";
 import { 
   PrimaryButton,
   SecondaryButton,
