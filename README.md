@@ -1,80 +1,68 @@
-# Portfolio Site
+# Portfolio
 
-A modern, dark-themed developer portfolio built with React 19, TypeScript, Vite, and styled-components.
+A modern developer portfolio built with React, TypeScript, and Vite. This repository contains the frontend app located in the `my-portfolio` folder.
 
-life-link:
-https://mariiazhytnikova.github.io/portfolio/
+Live demo: https://mariiazhytnikova.github.io/portfolio/
 
-## Features
-- **Single Page Application** with React Router
-- **Dark Side Developer** aesthetic (default dark mode, purple-orange accent gradient)
-- **Token-based theming** (centralized design tokens for colors, spacing, radius, etc.)
-- **Responsive, card-based layouts**
-- **Sticky, centered navbar**
-- **Reusable UI components** (Button, Card, Container, etc.)
-- **Section-based routing**: Spotlight, Backstory, Projects, Contacts
-- **SVG icon support**
+
 
 ## Tech Stack
-- React 19
-- TypeScript (strict mode)
-- Vite
-- styled-components
-- React Router DOM
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: styled-components (centralized tokens & themes)
+- **Interactivity**: Pixi.js (2D WebGL renderer) + Matter.js (physics engine)
+- **Build**: ESLint, TypeScript strict mode
 
-## Project Structure
+## Project layout
+Top-level app is in `my-portfolio/`. Key frontend code is under `my-portfolio/src/`:
+
 ```
-src/
-  app/         # App root, providers, routing
-  sections/    # Route-mapped page sections
-  components/
-    layout/    # Layout, Navbar, Section wrappers
-    ui/        # Reusable UI primitives
-  theme/       # Design tokens, themes, global styles
-  assets/icons # SVG icons
-public/        # Static assets (e.g., cv.pdf)
+my-portfolio/
+  src/
+    app/         # App root, providers, routing
+    sections/    # Route-mapped page sections
+    components/  # layout and UI primitives
+    theme/       # tokens and themes (dark/light variants)
+    engine/      # Pixi.js + Matter.js physics engine
+    assets/      # images and svgs
+  public/        # static files
 ```
 
-## Theming & Styling
-- All styles via styled-components (no CSS modules or inline styles)
-- Theme tokens in `src/theme/tokens.ts`
-- Theme variants in `src/theme/theme.ts`
-- Use theme tokens in all styled components
-- Toggle theme with `useThemeMode()` from `src/app/providers.tsx`
+## Quick start
+From the repository root:
 
-## Development
 ```bash
-npm install      # Install dependencies
-npm run dev      # Start Vite dev server (HMR)
-npm run build    # TypeScript check + production build
-npm run lint     # ESLint validation
-npm run preview  # Preview production build
+cd my-portfolio
+npm install
+npm run dev
 ```
 
-## Adding New Features
-- **New section page:**
-  1. Create in `src/sections/SectionName.tsx`
-  2. Add route in `src/app/App.tsx`
-  3. Add nav link in `src/components/layout/Navbar.tsx`
-- **New UI component:**
-  1. Create in `src/components/ui/ComponentName.tsx`
-  2. Use theme tokens only
-  3. Keep generic/reusable
-- **New theme token:**
-  1. Add to `src/theme/tokens.ts`
-  2. Update `src/theme/styled.d.ts` if needed
-  3. Override in `lightTheme` if required
+Common scripts (run inside `my-portfolio`):
 
-## Visual Identity
-- Default dark mode: `#0A0A0A` bg, `#262626` surfaces
-- Accent gradient: purple → orange (`#AD46FF` → `#FF6900`)
-- Card shadow: `0 4px 6px rgba(0,0,0,0.2)`
-- Pill-shaped buttons
+```bash
+npm run dev      # Start Vite dev server
+npm run build    # Create production build
+npm run preview  # Preview production build locally
+npm run lint     # Run ESLint checks
+```
 
----
+## Features in depth
 
-**Inspired by the "dark side" of development.**
+### Interactive Canvas (Spotlight section)
+The Spotlight section features an interactive **physics-driven word animation** powered by:
+- **Pixi.js**: WebGL 2D renderer for smooth, high-performance canvas rendering
+- **Matter.js**: 2D physics engine for realistic word particle interactions and collisions
+- Mouse interactions trigger explosions and physics forces on the words
 
----
+### Theme System
+- **Dark theme** (default): Professional dark aesthetic with purple–orange accent gradient
+- **Light theme**: Clean, high-contrast light mode with full color override support
+- Toggle theme dynamically; all styles use centralized tokens for consistency
+- Theme defined in `my-portfolio/src/theme/` with styled-components
 
-MIT License
+
+- Add UI components under `my-portfolio/src/components/ui/`.
+- Create section pages in `my-portfolio/src/sections/` and add routes in `my-portfolio/src/app/App.tsx`.
+- Keep styles driven by theme tokens in `my-portfolio/src/theme/`.
+
+## License
+MIT
