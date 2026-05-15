@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/wordEngine-HDwHALgo.js","assets/matter-CroJOzFe.js","assets/vendor-DlWzfryN.js","assets/styled-components-D1QBXhKA.js","assets/framer-motion-gnqc1zcW.js"])))=>i.map(i=>d[i]);
-import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as fe,af as G,ag as N,ah as xe,ai as O,aj as be,R as ye,ak as ve}from"./vendor-DlWzfryN.js";import{v as we,s as $e,y as n,o as je}from"./styled-components-D1QBXhKA.js";import"./matter-CroJOzFe.js";import{m as b}from"./framer-motion-gnqc1zcW.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))d(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&d(l)}).observe(document,{childList:!0,subtree:!0});function i(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerPolicy&&(a.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?a.credentials="include":r.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function d(r){if(r.ep)return;r.ep=!0;const a=i(r);fetch(r.href,a)}})();const ke=we`
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/wordEngine-D5l8dY8W.js","assets/matter-RI5pnDm3.js","assets/vendor-ds3eMsMa.js","assets/styled-components-BwL9-xBl.js","assets/framer-motion-D4M_OxTT.js"])))=>i.map(i=>d[i]);
+import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as fe,af as xe,ag as G,ah as N,ai as be,aj as Y,ak as ye,R as ve,al as we}from"./vendor-ds3eMsMa.js";import{v as $e,s as je,y as n,o as ke}from"./styled-components-BwL9-xBl.js";import"./matter-RI5pnDm3.js";import{m as b}from"./framer-motion-D4M_OxTT.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))d(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const l of a.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&d(l)}).observe(document,{childList:!0,subtree:!0});function i(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerPolicy&&(a.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?a.credentials="include":r.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function d(r){if(r.ep)return;r.ep=!0;const a=i(r);fetch(r.href,a)}})();const Se=$e`
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -41,7 +41,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   button {
     font-family: inherit;
   }
-`,x={colors:{bg:"#0A0A0A",surface:"#262626",surfaceSoft:"#26262680",text:"#e5e7eb",textSoft:"#A1A1A1",muted:"#FAFAFA",accent:"#FFFFFF",orange:"#FF6900",orangeLight:"#FF690033",purple:"#AD46FF",purpleLight:"#AD46FF33",blue:"#00d4ff"},typography:{h1:{size:"3rem",weight:700},h2:{size:"2rem",weight:600},h3:{size:"1.5rem",weight:600},subtitle:{size:"1.4rem",weight:600},body:{size:"1.2rem",weight:400},bodySM:{size:"1rem",weight:400},tag:{size:"0.9rem",weight:400}},radius:{sm:"8px",md:"14px",lg:"20px",pill:"999px"},spacing:{xs:"4px",sm:"8px",md:"16px",lg:"24px",xl:"40px",xxl:"64px",xxxl:"96px"},gradients:{primary:"linear-gradient(to right, #AD46FF, #FF6900)"},button:{paddingY:"14px",paddingX:"32px",iconSize:"18px",hoverLift:"translateY(-2px)",width:"175px",textWeightL:"600",textWeightM:"500",textSize:"0.95rem"},transitions:{default:"all 0.3s ease",fast:"all 0.2s ease",slow:"all 0.4s ease",colorDefault:"color 0.3s ease",colorFast:"color 0.2s ease",colorSlow:"color 0.4s ease",input:"border-color 0.2s ease-out, box-shadow 0.2s ease-out",fade:"opacity 0.3s ease-in-out"},container:{maxWidth:"1200px",maxLG:"992px",maxMD:"768px",maxSM:"576px"},shadows:{sm:"0 2px 4px rgba(0,0,0,0.1)",md:"0 4px 6px rgba(0,0,0,0.2)",lg:"0 8px 16px rgba(0,0,0,0.3)",glow:"0 0 0 2px #FF6900, 0 0 10px 4px #FF6900, 0 0 20px 6px #FF6900, 0 0 30px 8px #FF6900"}},Fe={...x},Se={...x,colors:{...x.colors,bg:"#f8fafc",surface:"#ffffff",surfaceSoft:"#e5e7eb80",text:"#0f172a",textSoft:"#575555",muted:"#242f3e",accent:"#0A0A0A"}},J=c.createContext(void 0);function Ce(){const e=c.useContext(J);if(!e)throw new Error("useThemeMode must be used within Providers");return e}function Te({children:e}){const o=()=>{if(typeof window<"u"){const s=localStorage.getItem("theme-mode");if(s==="light"||s==="dark")return s}return"dark"},[i,d]=c.useState(o);c.useEffect(()=>{localStorage.setItem("theme-mode",i)},[i]);const r=()=>{d(s=>s==="dark"?"light":"dark")},a=i==="dark"?Fe:Se,l=c.useMemo(()=>({mode:i,toggleMode:r}),[i]);return t.jsx(J.Provider,{value:l,children:t.jsxs($e,{theme:a,children:[t.jsx(ke,{}),e]})})}const Q=c.createContext({engine:null,setEngine:()=>{}});function ze({children:e}){const[o,i]=c.useState(null);return t.jsx(Q.Provider,{value:{engine:o,setEngine:i},children:e})}function K(){return c.useContext(Q)}const Ae=n.nav`
+`,x={colors:{bg:"#0A0A0A",surface:"#262626",surfaceSoft:"#26262680",text:"#e5e7eb",textSoft:"#d2d2d2",muted:"#FAFAFA",accent:"#FFFFFF",orange:"#FF6900",orangeLight:"#FF690033",purple:"#AD46FF",purpleLight:"#AD46FF33",blue:"#00d4ff"},typography:{h1:{size:"3rem",weight:700},h2:{size:"2rem",weight:600},h3:{size:"1.5rem",weight:600},subtitle:{size:"1.4rem",weight:600},body:{size:"1.2rem",weight:400},bodySM:{size:"1rem",weight:400},tag:{size:"0.9rem",weight:400}},radius:{sm:"8px",md:"14px",lg:"20px",pill:"999px"},spacing:{xs:"4px",sm:"8px",md:"16px",lg:"24px",xl:"40px",xxl:"64px",xxxl:"96px"},gradients:{primary:"linear-gradient(to right, #AD46FF, #FF6900)"},button:{paddingY:"14px",paddingX:"32px",iconSize:"18px",hoverLift:"translateY(-2px)",width:"175px",textWeightL:"600",textWeightM:"500",textSize:"0.95rem"},transitions:{default:"all 0.3s ease",fast:"all 0.2s ease",slow:"all 0.4s ease",colorDefault:"color 0.3s ease",colorFast:"color 0.2s ease",colorSlow:"color 0.4s ease",input:"border-color 0.2s ease-out, box-shadow 0.2s ease-out",fade:"opacity 0.3s ease-in-out"},container:{maxWidth:"1200px",maxLG:"992px",maxMD:"768px",maxSM:"576px"},shadows:{sm:"0 2px 4px rgba(0,0,0,0.1)",md:"0 4px 6px rgba(0,0,0,0.2)",lg:"0 8px 16px rgba(0,0,0,0.3)",glow:"0 0 0 2px #FF6900, 0 0 10px 4px #FF6900, 0 0 20px 6px #FF6900, 0 0 30px 8px #FF6900"}},Fe={...x},Ce={...x,colors:{...x.colors,bg:"#f8fafc",surface:"#ffffff",surfaceSoft:"#e5e7eb80",text:"#0f172a",textSoft:"#575555",muted:"#242f3e",accent:"#0A0A0A"}},J=c.createContext(void 0);function Te(){const e=c.useContext(J);if(!e)throw new Error("useThemeMode must be used within Providers");return e}function ze({children:e}){const o=()=>{if(typeof window<"u"){const s=localStorage.getItem("theme-mode");if(s==="light"||s==="dark")return s}return"dark"},[i,d]=c.useState(o);c.useEffect(()=>{localStorage.setItem("theme-mode",i)},[i]);const r=()=>{d(s=>s==="dark"?"light":"dark")},a=i==="dark"?Fe:Ce,l=c.useMemo(()=>({mode:i,toggleMode:r}),[i]);return t.jsx(J.Provider,{value:l,children:t.jsxs(je,{theme:a,children:[t.jsx(Se,{}),e]})})}const Q=c.createContext({engine:null,setEngine:()=>{}});function Ae({children:e}){const[o,i]=c.useState(null);return t.jsx(Q.Provider,{value:{engine:o,setEngine:i},children:e})}function K(){return c.useContext(Q)}const Ie=n.nav`
   position: sticky;
   top: 0;
   z-index: 100;
@@ -55,15 +55,15 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   display: flex;
   align-items: center;
   justify-content: space-between;
-`,Ie=n.a`
+`,Me=n.a`
   font-size: 1.5rem;
   font-weight: bold;
   color: ${({theme:e})=>e.colors.text};
   cursor: pointer;
-`,Me=n.div`
+`,De=n.div`
   display: flex;
   gap: ${({theme:e})=>e.spacing.md};
-`,De=n.a`
+`,Ee=n.a`
   color: ${({theme:e})=>e.colors.textSoft};
   text-decoration: none;
   font-weight: 500;
@@ -89,11 +89,11 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   &:hover:after {
     width: 100%;
   }
-`,Ee=n.div`
+`,Pe=n.div`
   display: flex;
   align-items: center;
   gap: ${({theme:e})=>e.spacing.sm};
-`,Pe=n.div`
+`,Be=n.div`
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -102,7 +102,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   padding-top: 16px;
   border-top: 1px solid rgba(161, 161, 161, 0.25);
   font-size: 12px;
-`,Y=n.button`
+`,O=n.button`
   background: none;
   border: none;
   color: ${({theme:e})=>e.colors.accent};
@@ -116,7 +116,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
     opacity: 0.7;
     text-decoration: underline;
   }
-`,Be=n.button`
+`,He=n.button`
   position: relative;
   width: 66px;
   height: 34px;
@@ -150,10 +150,10 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   align-items: center;
   justify-content: center;
   width: 28px;
-`,He=n.div`
+`,Re=n.div`
   position: relative;
   display: inline-block;
-`,Re=n.input`
+`,We=n.input`
   height: 38px;
   min-width: 200px;
   padding: 0 ${({theme:e})=>e.spacing.lg} 0 ${({theme:e})=>e.spacing.md};
@@ -185,11 +185,11 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   color: ${({theme:e})=>e.colors.muted};
   transition: ${({theme:e})=>e.transitions.input};
 
-  ${He}:hover & {
+  ${Re}:hover & {
     transform: translateY(-50%) scale(1.2);
     color: ${({theme:e})=>e.colors.bg};
   }
-`;function We({logoText:e,links:o,showSearch:i=!1,showThemeToggle:d=!0}){const{mode:r,toggleMode:a}=Ce(),[l,s]=c.useState(""),{engine:u}=K();return t.jsx(Ae,{children:t.jsxs(Le,{children:[t.jsx(Ie,{href:"#",children:e}),t.jsx(Me,{children:o.map(p=>t.jsx(De,{href:p.href,children:p.label},p.href))}),t.jsxs(Ee,{children:[i&&t.jsx(Re,{type:"search",placeholder:"Try me...",value:l,onChange:p=>s(p.target.value),onKeyDown:p=>{p.key==="Enter"&&l.trim()&&(u?.addWord(l),s(""))}}),d&&t.jsxs(Be,{onClick:a,$isLight:r==="light","aria-label":"Toggle theme",children:[t.jsx(V,{children:"🌙"}),t.jsx(V,{children:"☀️"})]})]})]})})}function Ge(){const e=[{label:"About",href:"#about"},{label:"Projects",href:"#projects"},{label:"Get In Touch",href:"#getintouch"}];return t.jsxs(ze,{children:[t.jsx(We,{logoText:"Maria Zhytnikova",links:e,showSearch:!0,showThemeToggle:!0}),t.jsx(pe,{})]})}const Ne=n.section`
+`;function Ge({logoText:e,links:o,showSearch:i=!1,showThemeToggle:d=!0}){const{mode:r,toggleMode:a}=Te(),[l,s]=c.useState(""),{engine:u}=K();return t.jsx(Ie,{children:t.jsxs(Le,{children:[t.jsx(Me,{href:"#",children:e}),t.jsx(De,{children:o.map(p=>t.jsx(Ee,{href:p.href,children:p.label},p.href))}),t.jsxs(Pe,{children:[i&&t.jsx(We,{type:"search",placeholder:"Try me...",value:l,onChange:p=>s(p.target.value),onKeyDown:p=>{p.key==="Enter"&&l.trim()&&(u?.addWord(l),s(""))}}),d&&t.jsxs(He,{onClick:a,$isLight:r==="light","aria-label":"Toggle theme",children:[t.jsx(V,{children:"🌙"}),t.jsx(V,{children:"☀️"})]})]})]})})}function Ne(){const e=[{label:"About",href:"#about"},{label:"Projects",href:"#projects"},{label:"Get In Touch",href:"#getintouch"}];return t.jsxs(Ae,{children:[t.jsx(Ge,{logoText:"Maria Zhytnikova",links:e,showSearch:!0,showThemeToggle:!0}),t.jsx(pe,{})]})}const Ye=n.section`
   background: ${({$bg:e,theme:o})=>e||o.colors.bg};
   scroll-margin-top: 80px;
   padding: ${({theme:e})=>e.spacing.xxl};
@@ -197,7 +197,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   display: flex;
   justify-content: center;  // horizontal center
   align-items: center;      // vertical center
-`;function C({id:e,children:o,$bg:i}){return t.jsx(Ne,{id:e,$bg:i,children:o})}const T=n.div`
+`;function C({id:e,children:o,$bg:i}){return t.jsx(Ye,{id:e,$bg:i,children:o})}const T=n.div`
   max-width: ${({theme:e})=>e.container.maxWidth};
   margin: 0 auto;
   padding: ${({theme:e})=>e.spacing.xs};
@@ -230,7 +230,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
     transform: ${({theme:e})=>e.button.hoverLift};
     box-shadow: 0 4px 12px ${({theme:e})=>e.colors.purple}66;
   }
-`,Ye=n(H)`
+`,Ve=n(H)`
   width: 75%;
   background: ${({theme:e})=>e.gradients.primary};
   color: ${({theme:e})=>e.colors.accent};
@@ -239,7 +239,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
     transform: ${({theme:e})=>e.button.hoverLift};
     box-shadow: 0 4px 12px ${({theme:e})=>e.colors.purple}66;
   }
-`,Ve=n(H)`
+`,_e=n(H)`
   background: transparent;
   color: ${({theme:e})=>e.colors.text};
   border: 2px solid ${({theme:e})=>e.colors.surface};
@@ -256,7 +256,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
     height: ${({theme:e})=>e.button.iconSize};
     flex-shrink: 0;
   }
-`,_e=n.a`
+`,qe=n.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -294,7 +294,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   &:hover svg {
     transform: translateX(6px); /* move icon with text */
   }
-`,_=n(_e)`
+`,_=n(qe)`
   position: relative;
   overflow: hidden;
 
@@ -351,7 +351,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   &:hover {
     opacity: 0.7;
   }
-`,qe=n.a`
+`,Ue=n.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -379,11 +379,11 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   &:hover svg {
     stroke: ${({theme:e})=>e.colors.purple};
   }
-`,R=({buttons:e})=>t.jsx(B,{children:e.map(({href:o,Icon:i,label:d},r)=>t.jsx(qe,{href:o,target:o.startsWith("mailto:")?void 0:"_blank",rel:o.startsWith("mailto:")?void 0:"noopener noreferrer","aria-label":d,children:t.jsx(i,{})},r))}),W=[{href:"https://github.com/MariiaZhytnikova",Icon:te,label:"GitHub"},{href:"https://www.linkedin.com/in/mariia-zhytnikova",Icon:Ue,label:"LinkedIn"},{href:"mailto:allusio@gmail.com",Icon:P,label:"Email"}];function te(e){return t.jsx("svg",{...e,xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:t.jsx("path",{d:"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"})})}function Ue(e){return t.jsxs("svg",{...e,xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[t.jsx("path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}),t.jsx("rect",{x:"2",y:"9",width:"4",height:"12"}),t.jsx("circle",{cx:"4",cy:"4",r:"2"})]})}function Ze(e){return t.jsxs("svg",{...e,xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[t.jsx("path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}),t.jsx("polyline",{points:"7 10 12 15 17 10"}),t.jsx("line",{x1:"12",y1:"15",x2:"12",y2:"3"})]})}const Xe=n.div`
+`,R=({buttons:e})=>t.jsx(B,{children:e.map(({href:o,Icon:i,label:d},r)=>t.jsx(Ue,{href:o,target:o.startsWith("mailto:")?void 0:"_blank",rel:o.startsWith("mailto:")?void 0:"noopener noreferrer","aria-label":d,children:t.jsx(i,{})},r))}),W=[{href:"https://github.com/MariiaZhytnikova",Icon:te,label:"GitHub"},{href:"https://www.linkedin.com/in/mariia-zhytnikova",Icon:Ze,label:"LinkedIn"},{href:"mailto:allusio@gmail.com",Icon:P,label:"Email"}];function te(e){return t.jsx("svg",{...e,xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:t.jsx("path",{d:"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"})})}function Ze(e){return t.jsxs("svg",{...e,xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[t.jsx("path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}),t.jsx("rect",{x:"2",y:"9",width:"4",height:"12"}),t.jsx("circle",{cx:"4",cy:"4",r:"2"})]})}function Xe(e){return t.jsxs("svg",{...e,xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[t.jsx("path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}),t.jsx("polyline",{points:"7 10 12 15 17 10"}),t.jsx("line",{x1:"12",y1:"15",x2:"12",y2:"3"})]})}const Je=n.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.sm};
-`,Je=n.a`
+`,Qe=n.a`
   display: flex;
   align-items: center;
   gap: ${({theme:e})=>e.spacing.sm};
@@ -399,7 +399,33 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   &:hover {
     opacity: 0.8;
   }
-`,oe=({items:e})=>t.jsx(Xe,{children:e.map((o,i)=>{const d=o.icon;return t.jsxs(Je,{href:o.href,color:o.color,children:[t.jsx("div",{children:t.jsx(d,{size:16,color:o.color==="purple"?"#a855f7":"#fb923c"})}),o.text]},i)})}),ne=[{icon:P,text:"allusio@gmail.com",href:"mailto:allusio@gmail.com",color:"purple"},{icon:he,text:"+358 465 760 200",href:"tel:+358465760200",color:"orange"},{icon:ue,text:"Helsinki, Finland",href:"#",color:"purple"}],Qe=[{content:"In November 2024, I joined Hive Helsinki, a fully project-based program. There, I’ve been diving into C and C++ projects, learning low-level system programming, and collaborating with talented peers to create innovative solutions. It’s been an exciting journey so far, and I’m eager to see where it takes me!"},{content:"Before moving into tech, I had the opportunity to work as a scientific consultant at NIBR and as a Research Officer at Institute of Radiophysics and Electronics NASU. This experience honed my problem-solving skills and deepened my appreciation for the power of programming in scientific research."},{content:"When I transitioned into tech, I realized many of my previous skills were directly transferable. My experience with data analysis, problem-solving, and working with complex systems has given me a strong foundation for learning programming languages and software development practices. I’m excited to apply these skills in new ways and continue growing as a developer."}],F=n.div`
+`,oe=({items:e})=>t.jsx(Je,{children:e.map((o,i)=>{const d=o.icon;return t.jsxs(Qe,{href:o.href,color:o.color,children:[t.jsx("div",{children:t.jsx(d,{size:16,color:o.color==="purple"?"#a855f7":"#fb923c"})}),o.text]},i)})}),ne=[{icon:P,text:"allusio@gmail.com",href:"mailto:allusio@gmail.com",color:"purple"},{icon:he,text:"+358 465 760 200",href:"tel:+358465760200",color:"orange"},{icon:ue,text:"Helsinki, Finland",href:"#",color:"purple"}],Ke=[{content:"Hey!"},{content:"I'm Mariia Zhytnikova,"},{content:`A software engineering student in Helsinki with a background in 
+    **biophysics research**, computational science, and data analysis. Today, I focus on 
+    **backend development**, **systems programming**, and **full-stack applications**
+    , combining my scientific mindset with modern software engineering.`},{content:`Currently, I’m studying at **Hive Helsinki (42 Network)**, a peer-to-peer
+    programming school focused on project-based learning in **C**, **C++**, and
+    **TypeScript**. The program emphasizes collaboration, code reviews, and
+    problem-solving under pressure, while building real systems from scratch.
+    It requires strong self-responsibility and time management, as there are
+    no traditional lectures or teachers — learning is fully self-driven through
+    projects and peer collaboration.`},{content:`Before transitioning into software engineering, I spent many years working in 
+    **scientific research** in Kharkiv. I earned a **Ph.D. in Mathematical & Physical Sciences** 
+    (Biophysics) after completing my studies in biophysics with honors at 
+    [*Karazin University*](https://karazin.ua/en/).`},{content:`My research career at Institute of Radiophysics and Electronics NASU focused 
+    on computational modeling of protein-DNA interactions, structural analysis, database 
+    development, and scientific simulations. I worked with complex datasets, developed 
+    research workflows, analyzed results, and contributed to scientific publications and 
+    conferences.`},{content:`Alongside academic research, I also worked as a **scientific consultant** for 
+    **biomedical projects connected with NIBR**, where I conducted literature reviews, 
+    analyzed clinical and biological data, and prepared analytical reports for decision-making 
+    processes. This experience strengthened my ability to process large amounts of information, 
+    communicate technical ideas clearly, and approach problems analytically.`},{content:`Changing industries and moving to a new country was challenging, but my research 
+    background prepared me well for continuous learning and adapting to unfamiliar problems. Many 
+    skills turned out to be highly transferable: analytical thinking, persistence, working with 
+    complex systems, and collaborating with people from different backgrounds.`},{content:`Outside of programming, I enjoy being in nature, discovering scenic landscapes, 
+    playing board games, and doing DIY projects.
+    I like trying new things and exploring new technologies in both crafting and
+    coding.`}],S=n.div`
   color: ${({theme:e})=>e.colors.text};
   padding: ${({$padding:e})=>e??"0"};
   min-height: auto;
@@ -408,12 +434,12 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   text-align: ${({textAlign:e})=>e??"left"};
   display: flex;
   flex-direction: column;
-`,Ke=n.div`
+`,et=n.div`
   width: 100%;
   height: 2px;
   background-color: ${({theme:e})=>e.colors.surface};
   margin: ${({theme:e})=>e.spacing.sm} 0;
-`,et=n.h1`
+`,tt=n.h1`
   font-size: ${({theme:e})=>e.typography.h1.size};
   font-weight: ${({theme:e})=>e.typography.h1.weight};
   line-height: 1.2;
@@ -422,7 +448,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   font-weight: ${({theme:e})=>e.typography.h2.weight};
   line-height: 1.3;
   padding-bottom: ${({theme:e})=>e.spacing.md};
-`,tt=n.h3`
+`,ot=n.h3`
   font-size: ${({theme:e})=>e.typography.h3.size};
   font-weight: ${({theme:e})=>e.typography.h3.weight};
 `,A=n.p`
@@ -431,7 +457,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   color: ${({theme:e})=>e.colors.textSoft};
   margin-top: ${({theme:e})=>e.spacing.md};
   margin-bottom: ${({theme:e})=>e.spacing.lg};
-`,S=n.span`
+`,F=n.span`
   font-size: ${({theme:e})=>e.typography.body.size};
   font-weight: ${({theme:e})=>e.typography.body.weight};
   color: ${({theme:e})=>e.colors.muted};
@@ -439,15 +465,15 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   margin-bottom: ${({theme:e})=>e.spacing.md};
   position: relative;
   cursor: default;
-`;function ot({children:e}){return t.jsx(b.span,{initial:{opacity:0,y:-5},whileHover:{opacity:1,y:0},transition:{duration:.5,ease:"easeOut"},style:{display:"inline-block",marginLeft:"0.3em"},children:e})}const ie=n.span`
+`;function nt({children:e}){return t.jsx(b.span,{initial:{opacity:0,y:-5},whileHover:{opacity:1,y:0},transition:{duration:.5,ease:"easeOut"},style:{display:"inline-block",marginLeft:"0.3em"},children:e})}const ie=n.span`
   font-size: ${({theme:e})=>e.typography.bodySM.size};
   font-weight: ${({theme:e})=>e.typography.bodySM.weight};
   color: ${({theme:e})=>e.colors.textSoft};
   line-height: 1.6;
   margin-bottom: ${({theme:e})=>e.spacing.md};
-`,nt=n(S)`
+`,it=n(F)`
   color: inherit;
-`,it=n(et)`
+`,rt=n(tt)`
   background: ${({theme:e})=>e.gradients.primary};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -475,7 +501,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   flex-direction: column;
   align-items: center; /* horizontal centering */
   gap: ${({theme:e})=>e.spacing.sm};
-`,rt=n(b.div)`
+`,st=n(b.div)`
   width: 300px;
   height: auto;
   position: relative;
@@ -490,7 +516,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
     height: 100%;
     object-fit: cover;
   }
-`,st=n.div`
+`,at=n.div`
   display: inline-flex;
   gap: ${({theme:e})=>e.spacing.sm};
   padding: ${({theme:e})=>e.spacing.sm};
@@ -527,10 +553,10 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   &:hover {
     transform: translateY(-2px);
   }
-`,at=n.div`
+`,lt=n.div`
   position: relative;
   padding-right: ${({theme:e})=>e.spacing.lg};
-`,lt=n.div`
+`,ct=n.div`
   position: absolute;
   right: 0;
   top: 0;
@@ -538,7 +564,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   width: 4px;
   background: ${({theme:e})=>e.colors.surface};
   overflow: hidden;
-`,ct=n.div`
+`,dt=n.div`
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -550,12 +576,12 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
     ${({theme:e})=>e.colors.orange}
   );
   opacity: 0.2;
-`,dt=n(b.div)`
+`,pt=n(b.div)`
   position: absolute;
   width: 100%;
   height: 120px;
   filter: blur(6px);
-`,pt=n(b.div)`
+`,ht=n(b.div)`
   position: absolute;
   width: 100%;
   height: 80px;
@@ -571,7 +597,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
   display: flex;
   flex-direction: column;
   gap: ${({$gap:e,theme:o})=>e||o.spacing.lg};
-`,le=n(ae)``,ce=n(ae)``;function ht({id:e}){const[o,i]=c.useState(0),d=c.useRef(null),r=l=>{if(d.current){const s=d.current.getBoundingClientRect(),u=l.clientY-s.top;i(u)}},a=l=>{const s=[x.colors.orange,x.colors.purple,x.colors.blue,x.colors.purple,x.colors.orange],u=Math.floor(l/100*s.length);return s[Math.min(u,s.length-1)]};return t.jsx(C,{id:e??"about",children:t.jsxs(T,{children:[t.jsxs(F,{height:"auto",children:[t.jsx(z,{children:"About Me"}),t.jsx(S,{children:"I’m a software developer student at Helsinki Hive, originally coming from a scientific research background."})]}),t.jsxs(se,{children:[t.jsx(le,{children:t.jsx(F,{height:"auto",$padding:"0",children:t.jsxs(re,{children:[t.jsx(rt,{whileHover:{scale:1.02},transition:{type:"spring",stiffness:300},children:t.jsx("img",{src:"./image.png",alt:"./image.png"})}),t.jsx(tt,{children:"Mariia Zhytnikova"}),t.jsx(st,{children:t.jsxs("a",{href:"https://www.hive.fi/about-hive/",target:"_blank",rel:"noopener noreferrer",children:[t.jsx(nt,{children:"Student at"}),t.jsx(Oe,{})]})}),t.jsx(Ke,{}),t.jsx(oe,{items:ne}),t.jsx(R,{buttons:W}),t.jsx(ee,{as:"a",href:"#contact",children:"Get In Touch"})]})})}),t.jsx(ce,{children:t.jsxs(at,{ref:d,onMouseMove:r,children:[t.jsxs(lt,{children:[t.jsx(ct,{}),t.jsx(dt,{style:{top:o-60,background:"linear-gradient(to bottom, transparent, currentColor, transparent)",color:a(o/(d.current?.clientHeight||1)*100)},transition:{type:"spring",stiffness:500,damping:30}}),t.jsx(pt,{style:{top:o-40,background:"linear-gradient(to bottom, transparent, currentColor, transparent)",color:a(o/(d.current?.clientHeight||1)*100)},transition:{type:"spring",stiffness:500,damping:30}})]}),Qe.map((l,s)=>t.jsx(ie,{as:"p",children:l.content},s))]})})]})]})})}const de=n.div`
+`,le=n(ae)``,ce=n(ae)``;function ut({id:e}){const[o,i]=c.useState(0),d=c.useRef(null),r=l=>{if(d.current){const s=d.current.getBoundingClientRect(),u=l.clientY-s.top;i(u)}},a=l=>{const s=[x.colors.orange,x.colors.purple,x.colors.blue,x.colors.purple,x.colors.orange],u=Math.floor(l/100*s.length);return s[Math.min(u,s.length-1)]};return t.jsx(C,{id:e??"about",children:t.jsxs(T,{children:[t.jsxs(S,{height:"auto",children:[t.jsx(z,{children:"About Me"}),t.jsx(F,{children:"I’m a software developer student at Helsinki Hive, originally coming from a scientific research background."})]}),t.jsxs(se,{children:[t.jsx(le,{children:t.jsx(S,{height:"auto",$padding:"0",children:t.jsxs(re,{children:[t.jsx(st,{whileHover:{scale:1.02},transition:{type:"spring",stiffness:300},children:t.jsx("img",{src:"./image.png",alt:"./image.png"})}),t.jsx(ot,{children:"Mariia Zhytnikova"}),t.jsx(at,{children:t.jsxs("a",{href:"https://www.hive.fi/about-hive/",target:"_blank",rel:"noopener noreferrer",children:[t.jsx(it,{children:"Student at"}),t.jsx(Oe,{})]})}),t.jsx(et,{}),t.jsx(oe,{items:ne}),t.jsx(R,{buttons:W}),t.jsx(ee,{as:"a",href:"#contact",children:"Get In Touch"})]})})}),t.jsx(ce,{children:t.jsxs(lt,{ref:d,onMouseMove:r,children:[t.jsxs(ct,{children:[t.jsx(dt,{}),t.jsx(pt,{style:{top:o-60,background:"linear-gradient(to bottom, transparent, currentColor, transparent)",color:a(o/(d.current?.clientHeight||1)*100)},transition:{type:"spring",stiffness:500,damping:30}}),t.jsx(ht,{style:{top:o-40,background:"linear-gradient(to bottom, transparent, currentColor, transparent)",color:a(o/(d.current?.clientHeight||1)*100)},transition:{type:"spring",stiffness:500,damping:30}})]}),Ke.map((l,s)=>t.jsx(ie,{as:"p",children:t.jsx(ge,{children:l.content})},s))]})})]})]})})}const de=n.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: ${({theme:e})=>e.spacing.md};
@@ -632,7 +658,7 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
       background-position: 0% 50%;
     }
   }
-`,ut=n.div`
+`,gt=n.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -795,9 +821,9 @@ import{d as c,A as t,a8 as pe,a9 as P,aa as he,ab as ue,ac as ge,ad as me,ae as 
       background-position: 0% 50%;
     }
   }
-`,k={frontend:["React","TypeScript","Tailwind CSS","Styled Components"],backend:["Node.js","TypeScript","Go","Python","Express","Fastify","REST APIs"],database:["PostgreSQL","MariaDB","Redis","SQLite","MySQL"],devops:["Docker","Git","CI/CD","Linux","Nginx"],systems:["C","C++","POSIX","Low-level programming"]};function gt({id:e}){const o=je();return t.jsx(C,{id:e,$bg:o.colors.surfaceSoft,children:t.jsx(T,{$paddingTop:"40px",$paddingBottom:"40px",children:t.jsxs(F,{height:"auto",children:[t.jsx(z,{children:"Skills & Technologies"}),t.jsxs(de,{children:[t.jsxs(j,{children:[t.jsx($,{children:"Frontend"}),t.jsx(y,{children:k.frontend.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"Backend"}),t.jsx(y,{children:k.backend.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"Database"}),t.jsx(y,{children:k.database.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"DevOps & Tools"}),t.jsx(y,{children:k.devops.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"Systems"}),t.jsx(y,{children:k.systems.map(i=>t.jsx(v,{children:i},i))})]})]})]})})})}const mt="/portfolio/assets/Maze_is_Lava-BAR8MH1x.png",ft="/portfolio/assets/DishDash-NcVmUuCQ.png",xt="/portfolio/assets/Hive_Game-Cfy4Dy58.png",bt=[{id:1,title:"Maze is lava",image:mt,description:"A full-stack multiplayer web-game with auth, chat and friends system",tech:["React","Vite","Tailwind CSS","Socket.io","TypeScript","Node.js","NestJS","Fastify","TypeORM","PostgreSQL","JWT","Swagger/OpenAPI","Jest","GitHub actions"],github:"https://github.com/Transcendence-surprise",live:"https://valinor.ink"},{id:2,title:"DishDash",image:ft,description:"🌱 A small tool with a big impact on food waste ",tech:["Node.js","Vite","TypeScript","React","Go","Rest API","GitHub actions","Deployment: GitHub Pages, Fly.io"],github:"https://github.com/MariiaZhytnikova/DishDash",live:"https://mariiazhytnikova.github.io/DishDash/"},{id:3,title:"Hive",image:xt,description:"the Hive game, designed by John Yianni",tech:["Node.js","Vite","TypeScript","Deployment: GitHub Pages"],github:"https://github.com/MariiaZhytnikova/Hive-abstract-game",live:"https://mariiazhytnikova.github.io/Hive-abstract-game/"}];function yt({id:e}){return t.jsx(C,{id:e,children:t.jsxs(T,{children:[t.jsx(z,{children:"Featured Projects"}),t.jsx(de,{children:bt.map(o=>t.jsxs(ut,{children:[t.jsx("div",{className:"lines",children:Array.from({length:10}).map((i,d)=>t.jsx("div",{className:"line"},d))}),t.jsx(A,{children:o.title}),t.jsx(S,{children:o.description}),o.image&&t.jsx("img",{src:o.image,alt:o.title,style:{width:"100%",height:"180px",objectFit:"cover",borderRadius:"8px",marginTop:"12px"}}),t.jsx(y,{children:o.tech.map(i=>t.jsx(v,{children:i},i))}),t.jsxs(B,{children:[t.jsxs(_,{label:"GitHub",href:o.github,target:"_blank",rel:"noopener noreferrer","aria-label":`${o.title} GitHub`,children:[t.jsx(te,{}),t.jsx("span",{children:"GitHub"})]}),t.jsxs(_,{label:"Live Demo",href:o.live,target:"_blank",rel:"noopener noreferrer","aria-label":`${o.title} Live Demo`,children:[t.jsx(ge,{}),t.jsx("span",{children:"Live Demo"})]})]})]},o.id))})]})})}const vt=n(b.div)`
+`,k={frontend:["React","TypeScript","Tailwind CSS","Styled Components"],backend:["Node.js","TypeScript","Go","Python","Express","Fastify","REST APIs"],database:["PostgreSQL","MariaDB","Redis","SQLite","MySQL"],devops:["Docker","Git","CI/CD","Linux","Nginx"],systems:["C","C++","POSIX","Low-level programming"]};function mt({id:e}){const o=ke();return t.jsx(C,{id:e,$bg:o.colors.surfaceSoft,children:t.jsx(T,{$paddingTop:"40px",$paddingBottom:"40px",children:t.jsxs(S,{height:"auto",children:[t.jsx(z,{children:"Skills & Technologies"}),t.jsxs(de,{children:[t.jsxs(j,{children:[t.jsx($,{children:"Frontend"}),t.jsx(y,{children:k.frontend.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"Backend"}),t.jsx(y,{children:k.backend.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"Database"}),t.jsx(y,{children:k.database.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"DevOps & Tools"}),t.jsx(y,{children:k.devops.map(i=>t.jsx(v,{children:i},i))})]}),t.jsxs(j,{children:[t.jsx($,{children:"Systems"}),t.jsx(y,{children:k.systems.map(i=>t.jsx(v,{children:i},i))})]})]})]})})})}const ft="/portfolio/assets/Maze_is_Lava-BAR8MH1x.png",xt="/portfolio/assets/DishDash-NcVmUuCQ.png",bt="/portfolio/assets/Hive_Game-Cfy4Dy58.png",yt=[{id:1,title:"Maze is lava",image:ft,description:"A full-stack multiplayer web-game with auth, chat and friends system",tech:["React","Vite","Tailwind CSS","Socket.io","TypeScript","Node.js","NestJS","Fastify","TypeORM","PostgreSQL","JWT","Swagger/OpenAPI","Jest","GitHub actions"],github:"https://github.com/Transcendence-surprise",live:"https://valinor.ink"},{id:2,title:"DishDash",image:xt,description:"🌱 A small tool with a big impact on food waste (Under development)",tech:["Node.js","Vite","TypeScript","React","Go","Rest API","GitHub actions","Deployment: GitHub Pages, Fly.io"],github:"https://github.com/MariiaZhytnikova/DishDash",live:"https://mariiazhytnikova.github.io/DishDash/"},{id:3,title:"Hive",image:bt,description:'Turn based web-game "The Hive", designed by John Yianni',tech:["Node.js","Vite","TypeScript","Deployment: GitHub Pages"],github:"https://github.com/MariiaZhytnikova/Hive-abstract-game",live:"https://mariiazhytnikova.github.io/Hive-abstract-game/"}];function vt({id:e}){return t.jsx(C,{id:e,children:t.jsxs(T,{children:[t.jsx(z,{children:"Featured Projects"}),t.jsx(de,{children:yt.map(o=>t.jsxs(gt,{children:[t.jsx("div",{className:"lines",children:Array.from({length:10}).map((i,d)=>t.jsx("div",{className:"line"},d))}),t.jsx(A,{children:o.title}),t.jsx(F,{children:o.description}),o.image&&t.jsx("img",{src:o.image,alt:o.title,style:{width:"100%",height:"180px",objectFit:"cover",borderRadius:"8px",marginTop:"12px"}}),t.jsx(y,{children:o.tech.map(i=>t.jsx(v,{children:i},i))}),t.jsxs(B,{children:[t.jsxs(_,{label:"GitHub",href:o.github,target:"_blank",rel:"noopener noreferrer","aria-label":`${o.title} GitHub`,children:[t.jsx(te,{}),t.jsx("span",{children:"GitHub"})]}),t.jsxs(_,{label:"Live Demo",href:o.live,target:"_blank",rel:"noopener noreferrer","aria-label":`${o.title} Live Demo`,children:[t.jsx(me,{}),t.jsx("span",{children:"Live Demo"})]})]})]},o.id))})]})})}const wt=n(b.div)`
   position: relative;
-`,I=({delay:e=0,children:o})=>t.jsx(vt,{initial:{opacity:0,x:-20},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5,delay:e},children:o}),wt=`
+`,L=({delay:e=0,children:o})=>t.jsx(wt,{initial:{opacity:0,x:-20},whileInView:{opacity:1,x:0},viewport:{once:!0},transition:{duration:.5,delay:e},children:o}),$t=`
 # Privacy Agreement
 
 **Last Updated: May 14, 2026**
@@ -834,7 +860,7 @@ For privacy concerns, you can reach out through the contact form on this website
 
 ## 8. Changes to This Agreement
 We may update this agreement periodically. Any changes will be noted with an updated "Last Updated" date.
-`,$t=`
+`,jt=`
 # Terms of Service
 
 **Last Updated: May 14, 2026**
@@ -870,7 +896,7 @@ These terms and conditions are governed by and construed in accordance with the 
 
 ## 9. Contact Information
 If you have any questions about these Terms of Service, please contact us through the contact form on this website.
-`,jt=n.form`
+`,kt=n.form`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.lg};
@@ -899,7 +925,7 @@ If you have any questions about these Terms of Service, please contact us throug
   &::placeholder {
     color: ${({theme:e})=>e.colors.muted};
   }
-`,kt=n(E).attrs({as:"textarea",rows:7})`
+`,St=n(E).attrs({as:"textarea",rows:7})`
   resize: none;
 `,Ft=n.span`
   color: ${({theme:e})=>e.colors.text};
@@ -944,4 +970,4 @@ If you have any questions about these Terms of Service, please contact us throug
     margin-top: 16px;
     margin-bottom: 8px;
   }
-`;function St({id:e}){const[o,i]=c.useState({name:"",email:"",message:""}),[d,r]=c.useState(null),[a,l]=c.useState("idle"),[s,u]=c.useState(!1),[p,g]=c.useState(!1),[m,f]=c.useState(0);c.useEffect(()=>{if(a!=="idle"){const h=setTimeout(()=>l("idle"),3e3);return()=>clearTimeout(h)}},[a]),c.useEffect(()=>{if(s||p){const h=()=>{f(window.scrollY)};return h(),window.addEventListener("scroll",h,{passive:!0}),window.addEventListener("resize",h),()=>{window.removeEventListener("scroll",h),window.removeEventListener("resize",h)}}},[s,p]);const w=h=>{i({...o,[h.target.name]:h.target.value})},L=async h=>{h.preventDefault(),l("idle"),(await fetch("https://formspree.io/f/mlgpyyjd",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(o)})).ok?(l("success"),i({name:"",email:"",message:""})):l("error")};return t.jsxs(C,{id:e??"getintouch",children:[t.jsx(T,{$paddingTop:"40px",$paddingBottom:"40px",children:t.jsxs(F,{height:"auto",children:[t.jsx(z,{children:"Get In Touch"}),t.jsxs(se,{children:[t.jsxs(le,{children:[t.jsx(ie,{children:"I'm always open to new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!"}),t.jsx(oe,{items:ne}),t.jsx(R,{buttons:W})]}),t.jsxs(ce,{children:[t.jsxs(jt,{onSubmit:L,children:[t.jsx(I,{delay:.3,children:t.jsxs(M,{children:[t.jsx(D,{$focused:d==="name",color:"#A855F7",children:t.jsx(me,{size:20})}),t.jsx(E,{type:"text",id:"name",name:"name",value:o.name,placeholder:"your name",onFocus:()=>r("name"),onBlur:()=>r(null),onChange:w,required:!0})]})}),t.jsx(I,{delay:.4,children:t.jsxs(M,{children:[t.jsx(D,{$focused:d==="email",color:"#FB923C",children:t.jsx(P,{size:20})}),t.jsx(E,{type:"email",$focusColor:"#FB923C",id:"email",name:"email",value:o.email,placeholder:"your.email@example.com",onFocus:()=>r("email"),onBlur:()=>r(null),onChange:w,required:!0})]})}),t.jsx(I,{delay:.5,children:t.jsxs(M,{children:[t.jsx(D,{$focused:d==="message",color:"#A855F7",$alignTop:!0,children:t.jsx(fe,{size:20})}),t.jsx(kt,{id:"message",name:"message",value:o.message,placeholder:"your message...",onFocus:()=>r("message"),onBlur:()=>r(null),onChange:w,required:!0})]})}),t.jsx(re,{children:t.jsxs(Ye,{type:"submit",children:[a==="idle"&&t.jsxs(t.Fragment,{children:[t.jsx("span",{style:{fontSize:16,lineHeight:1},children:"Send Message"}),t.jsx(G,{size:20})]}),a==="success"&&t.jsxs(t.Fragment,{children:[t.jsx(G,{size:20}),t.jsx("span",{style:{fontSize:16,lineHeight:1},children:"Sent!"})]}),a==="error"&&t.jsx("span",{style:{fontSize:16,lineHeight:1},children:"❌ Try again"})]})})]}),t.jsxs(Pe,{children:[t.jsx("span",{style:{fontSize:12,lineHeight:1},children:"By using this form, you agree to our "}),t.jsx(Y,{type:"button",onClick:()=>u(!0),children:"Privacy Agreement"}),t.jsx(Ft,{children:"•"}),t.jsx(Y,{type:"button",onClick:()=>g(!0),children:"Terms of Service"})]})]})]})]})}),s&&N.createPortal(t.jsx(U,{$top:m,onClick:()=>u(!1),children:t.jsxs(Z,{onClick:h=>h.stopPropagation(),children:[t.jsx(q,{onClick:()=>u(!1),children:"×"}),t.jsx("pre",{children:wt})]})}),document.body),p&&N.createPortal(t.jsx(U,{$top:m,onClick:()=>g(!1),children:t.jsxs(Z,{onClick:h=>h.stopPropagation(),children:[t.jsx(q,{onClick:()=>g(!1),children:"×"}),t.jsx("pre",{children:$t})]})}),document.body)]})}const Ct="modulepreload",Tt=function(e){return"/portfolio/"+e},X={},zt=function(o,i,d){let r=Promise.resolve();if(i&&i.length>0){let u=function(p){return Promise.all(p.map(g=>Promise.resolve(g).then(m=>({status:"fulfilled",value:m}),m=>({status:"rejected",reason:m}))))};document.getElementsByTagName("link");const l=document.querySelector("meta[property=csp-nonce]"),s=l?.nonce||l?.getAttribute("nonce");r=u(i.map(p=>{if(p=Tt(p),p in X)return;X[p]=!0;const g=p.endsWith(".css"),m=g?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${p}"]${m}`))return;const f=document.createElement("link");if(f.rel=g?"stylesheet":Ct,g||(f.as="script"),f.crossOrigin="",f.href=p,s&&f.setAttribute("nonce",s),document.head.appendChild(f),g)return new Promise((w,L)=>{f.addEventListener("load",w),f.addEventListener("error",()=>L(new Error(`Unable to preload CSS for ${p}`)))})}))}function a(l){const s=new Event("vite:preloadError",{cancelable:!0});if(s.payload=l,window.dispatchEvent(s),!s.defaultPrevented)throw l}return r.then(l=>{for(const s of l||[])s.status==="rejected"&&a(s.reason);return o().catch(a)})};function At({id:e}){const o=c.useRef(null),i=c.useRef(null),{setEngine:d}=K();return c.useEffect(()=>{let r=0,a=!1;return(async()=>{const s=o.current;if(!s)return;const{WordEngine:u}=await zt(async()=>{const{WordEngine:m}=await import("./wordEngine-HDwHALgo.js");return{WordEngine:m}},__vite__mapDeps([0,1,2,3,4]));if(a||!s.isConnected)return;const p=new u(s);i.current=p,d(p);const g=()=>{a||(p.update(),r=window.requestAnimationFrame(g))};r=window.requestAnimationFrame(g)})(),()=>{a=!0,d(null),i.current?.destroy(),window.cancelAnimationFrame(r)}},[]),console.log("canvasRef:",o.current),t.jsx(C,{id:e,children:t.jsx(T,{children:t.jsxs(F,{height:"clamp(640px, 78vh, 920px)",style:{position:"relative",overflow:"hidden"},children:[t.jsx("div",{ref:o,style:{position:"absolute",inset:0,overflow:"hidden",height:"100%",width:"100%",pointerEvents:"auto",outline:"2px solid red"}}),t.jsx(it,{children:"Hi, I'm Maria"}),t.jsx(A,{children:"Software Engineer"}),t.jsxs(S,{children:["I know exactly what I'm doing...",t.jsx(ot,{children:"But in a much more real sense, I have no idea what I'm doing."})]}),t.jsx(S,{children:"Software engineering student turning ideas into real, working software. I explore systems, debug issues, and refine solutions — everything from low-level programs to full-stack applications. I learn by doing, experimenting, and improving along the way."}),t.jsxs(B,{children:[t.jsx(ee,{as:"a",href:"#getintouch",children:"Get In Touch"}),t.jsxs(Ve,{as:"a",href:"./CV-Mariia_Zhytnikova.pdf",download:!0,"aria-label":"Download CV as PDF",children:[t.jsx(Ze,{}),"Download CV"]})]}),t.jsx(R,{buttons:W})]})})})}function Lt(){return t.jsxs(t.Fragment,{children:[t.jsx(At,{id:"spotlight"}),t.jsx(ht,{id:"about"}),t.jsx(gt,{id:"skills"}),t.jsx(yt,{id:"projects"}),t.jsx(St,{id:"getintouch"})]})}function It(){return t.jsx(xe,{children:t.jsx(O,{element:t.jsx(Ge,{}),children:t.jsx(O,{path:"/",element:t.jsx(Lt,{})})})})}be.createRoot(document.getElementById("root")).render(t.jsx(ye.StrictMode,{children:t.jsx(Te,{children:t.jsx(ve,{basename:"/portfolio/",children:t.jsx(It,{})})})}));export{x as t};
+`;function Ct({id:e}){const[o,i]=c.useState({name:"",email:"",message:""}),[d,r]=c.useState(null),[a,l]=c.useState("idle"),[s,u]=c.useState(!1),[p,g]=c.useState(!1),[m,f]=c.useState(0);c.useEffect(()=>{if(a!=="idle"){const h=setTimeout(()=>l("idle"),3e3);return()=>clearTimeout(h)}},[a]),c.useEffect(()=>{if(s||p){const h=()=>{f(window.scrollY)};return h(),window.addEventListener("scroll",h,{passive:!0}),window.addEventListener("resize",h),()=>{window.removeEventListener("scroll",h),window.removeEventListener("resize",h)}}},[s,p]);const w=h=>{i({...o,[h.target.name]:h.target.value})},I=async h=>{h.preventDefault(),l("idle"),(await fetch("https://formspree.io/f/mlgpyyjd",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(o)})).ok?(l("success"),i({name:"",email:"",message:""})):l("error")};return t.jsxs(C,{id:e??"getintouch",children:[t.jsx(T,{$paddingTop:"40px",$paddingBottom:"40px",children:t.jsxs(S,{height:"auto",children:[t.jsx(z,{children:"Get In Touch"}),t.jsxs(se,{children:[t.jsxs(le,{children:[t.jsx(ie,{children:"I'm always open to new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!"}),t.jsx(oe,{items:ne}),t.jsx(R,{buttons:W})]}),t.jsxs(ce,{children:[t.jsxs(kt,{onSubmit:I,children:[t.jsx(L,{delay:.3,children:t.jsxs(M,{children:[t.jsx(D,{$focused:d==="name",color:"#A855F7",children:t.jsx(fe,{size:20})}),t.jsx(E,{type:"text",id:"name",name:"name",value:o.name,placeholder:"your name",onFocus:()=>r("name"),onBlur:()=>r(null),onChange:w,required:!0})]})}),t.jsx(L,{delay:.4,children:t.jsxs(M,{children:[t.jsx(D,{$focused:d==="email",color:"#FB923C",children:t.jsx(P,{size:20})}),t.jsx(E,{type:"email",$focusColor:"#FB923C",id:"email",name:"email",value:o.email,placeholder:"your.email@example.com",onFocus:()=>r("email"),onBlur:()=>r(null),onChange:w,required:!0})]})}),t.jsx(L,{delay:.5,children:t.jsxs(M,{children:[t.jsx(D,{$focused:d==="message",color:"#A855F7",$alignTop:!0,children:t.jsx(xe,{size:20})}),t.jsx(St,{id:"message",name:"message",value:o.message,placeholder:"your message...",onFocus:()=>r("message"),onBlur:()=>r(null),onChange:w,required:!0})]})}),t.jsx(re,{children:t.jsxs(Ve,{type:"submit",children:[a==="idle"&&t.jsxs(t.Fragment,{children:[t.jsx("span",{style:{fontSize:16,lineHeight:1},children:"Send Message"}),t.jsx(G,{size:20})]}),a==="success"&&t.jsxs(t.Fragment,{children:[t.jsx(G,{size:20}),t.jsx("span",{style:{fontSize:16,lineHeight:1},children:"Sent!"})]}),a==="error"&&t.jsx("span",{style:{fontSize:16,lineHeight:1},children:"❌ Try again"})]})})]}),t.jsxs(Be,{children:[t.jsx("span",{style:{fontSize:12,lineHeight:1},children:"By using this form, you agree to our "}),t.jsx(O,{type:"button",onClick:()=>u(!0),children:"Privacy Agreement"}),t.jsx(Ft,{children:"•"}),t.jsx(O,{type:"button",onClick:()=>g(!0),children:"Terms of Service"})]})]})]})]})}),s&&N.createPortal(t.jsx(U,{$top:m,onClick:()=>u(!1),children:t.jsxs(Z,{onClick:h=>h.stopPropagation(),children:[t.jsx(q,{onClick:()=>u(!1),children:"×"}),t.jsx("pre",{children:$t})]})}),document.body),p&&N.createPortal(t.jsx(U,{$top:m,onClick:()=>g(!1),children:t.jsxs(Z,{onClick:h=>h.stopPropagation(),children:[t.jsx(q,{onClick:()=>g(!1),children:"×"}),t.jsx("pre",{children:jt})]})}),document.body)]})}const Tt="modulepreload",zt=function(e){return"/portfolio/"+e},X={},At=function(o,i,d){let r=Promise.resolve();if(i&&i.length>0){let u=function(p){return Promise.all(p.map(g=>Promise.resolve(g).then(m=>({status:"fulfilled",value:m}),m=>({status:"rejected",reason:m}))))};document.getElementsByTagName("link");const l=document.querySelector("meta[property=csp-nonce]"),s=l?.nonce||l?.getAttribute("nonce");r=u(i.map(p=>{if(p=zt(p),p in X)return;X[p]=!0;const g=p.endsWith(".css"),m=g?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${p}"]${m}`))return;const f=document.createElement("link");if(f.rel=g?"stylesheet":Tt,g||(f.as="script"),f.crossOrigin="",f.href=p,s&&f.setAttribute("nonce",s),document.head.appendChild(f),g)return new Promise((w,I)=>{f.addEventListener("load",w),f.addEventListener("error",()=>I(new Error(`Unable to preload CSS for ${p}`)))})}))}function a(l){const s=new Event("vite:preloadError",{cancelable:!0});if(s.payload=l,window.dispatchEvent(s),!s.defaultPrevented)throw l}return r.then(l=>{for(const s of l||[])s.status==="rejected"&&a(s.reason);return o().catch(a)})};function It({id:e}){const o=c.useRef(null),i=c.useRef(null),{setEngine:d}=K();return c.useEffect(()=>{let r=0,a=!1;return(async()=>{const s=o.current;if(!s)return;const{WordEngine:u}=await At(async()=>{const{WordEngine:m}=await import("./wordEngine-D5l8dY8W.js");return{WordEngine:m}},__vite__mapDeps([0,1,2,3,4]));if(a||!s.isConnected)return;const p=new u(s);i.current=p,d(p);const g=()=>{a||(p.update(),r=window.requestAnimationFrame(g))};r=window.requestAnimationFrame(g)})(),()=>{a=!0,d(null),i.current?.destroy(),window.cancelAnimationFrame(r)}},[]),console.log("canvasRef:",o.current),t.jsx(C,{id:e,children:t.jsx(T,{children:t.jsxs(S,{height:"clamp(640px, 78vh, 920px)",style:{position:"relative",overflow:"hidden"},children:[t.jsx("div",{ref:o,style:{position:"absolute",inset:0,overflow:"hidden",height:"100%",width:"100%",pointerEvents:"auto",outline:"2px solid red"}}),t.jsx(rt,{children:"Hi, I'm Maria"}),t.jsx(A,{children:"Software Engineer"}),t.jsxs(F,{children:["I know exactly what I'm doing...",t.jsx(nt,{children:"But in a much more real sense, I have no idea what I'm doing."})]}),t.jsx(F,{children:"Software engineering student turning ideas into real, working software. I explore systems, debug issues, and refine solutions — everything from low-level programs to full-stack applications. I learn by doing, experimenting, and improving along the way."}),t.jsxs(B,{children:[t.jsx(ee,{as:"a",href:"#getintouch",children:"Get In Touch"}),t.jsxs(_e,{as:"a",href:"./CV-Mariia_Zhytnikova.pdf",download:!0,"aria-label":"Download CV as PDF",children:[t.jsx(Xe,{}),"Download CV"]})]}),t.jsx(R,{buttons:W})]})})})}function Lt(){return t.jsxs(t.Fragment,{children:[t.jsx(It,{id:"spotlight"}),t.jsx(ut,{id:"about"}),t.jsx(mt,{id:"skills"}),t.jsx(vt,{id:"projects"}),t.jsx(Ct,{id:"getintouch"})]})}function Mt(){return t.jsx(be,{children:t.jsx(Y,{element:t.jsx(Ne,{}),children:t.jsx(Y,{path:"/",element:t.jsx(Lt,{})})})})}ye.createRoot(document.getElementById("root")).render(t.jsx(ve.StrictMode,{children:t.jsx(ze,{children:t.jsx(we,{basename:"/portfolio/",children:t.jsx(Mt,{})})})}));export{x as t};
