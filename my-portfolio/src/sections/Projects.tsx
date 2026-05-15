@@ -6,9 +6,9 @@ import { Grid, BGCategory } from "../components/ui/Grid";
 import { Tag } from "../components/ui/Tag";
 import { TagGroup } from "../components/ui/TagGroup";
 import { ButtonContainer, AnimatedTextIconButton } from "../components/ui/Button";
-import { GitHub } from "../components/data/SocialLinksData";
+import { GitHub } from "../data/SocialLinksData";
 import { ExternalLink } from "lucide-react"
-import { projects } from "../components/data/ProjectsData";
+import { projects } from "../data/ProjectsData";
 
 type ProjectsProps = {
   id?: string;

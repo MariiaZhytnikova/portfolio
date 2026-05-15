@@ -5,10 +5,10 @@ import { useRef, useState } from "react";
 import { Container } from "../components/ui/Container.tsx";
 import HiveLogo from '../assets/hive-logo-light.svg?react';
 import { SocialButtons } from "../components/ui/SosialButtons.tsx";
-import { socialLinks } from "../components/data/SocialLinksData.tsx";
+import { socialLinks } from "../data/SocialLinksData.tsx";
 import { ContactList } from "../components/ui/ContactList.tsx";
-import { contactInfo } from "../components/data/ContactInfoData.tsx";
-import { experiences } from "../components/data/ExperienceData.tsx";
+import { contactInfo } from "../data/ContactInfoData.tsx";
+import { experiences } from "../data/ExperienceData.tsx";
 import { Card } from "../components/ui/Card.tsx";
 import { Divider } from "../components/ui/Divider.tsx";
 import { HeadingLG, HeadingMD, ColorfulBodyText, BodyText, BodyTextSm } from "../components/ui/Typography";
@@ -30,7 +30,7 @@ import {
   LeftColumn,
   RightColumn,
 } from "../components/ui/Columns.tsx";
-
+import ReactMarkdown from "react-markdown";
 
 type AboutProps = {
   id?: string;
@@ -137,8 +137,11 @@ const getLineColor = (position: number) => {
 
               {/* Text */}
               {experiences.map((exp, index) => (
+
                 <BodyTextSm as="p" key={index}>
-                  {exp.content}
+                  <ReactMarkdown>
+                    {exp.content}
+                  </ReactMarkdown>
                 </BodyTextSm>
               ))}
             </TimelineWrapper>

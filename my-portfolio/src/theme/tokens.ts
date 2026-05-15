@@ -5,7 +5,7 @@ export const tokens = {
     surface: "#262626",
     surfaceSoft: "#26262680",
     text: "#e5e7eb",
-    textSoft: "#A1A1A1",
+    textSoft: "#d2d2d2",
     muted: "#FAFAFA",
     accent: "#FFFFFF",
     orange: "#FF6900",
