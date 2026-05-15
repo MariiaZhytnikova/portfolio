@@ -4,7 +4,7 @@ A modern developer portfolio built with React, TypeScript, and Vite. This reposi
 
 Live demo: https://mariiazhytnikova.github.io/portfolio/
 
-
+<img width="1821" height="1377" alt="image" src="https://github.com/user-attachments/assets/f0ebe64d-c6a7-4605-80d4-fb747132fb16" />
 
 ## Tech Stack
 - **Frontend**: React, TypeScript, Vite
